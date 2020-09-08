@@ -1,0 +1,33 @@
+---------------------------------------------------------------
+[ 2018-11-25T15:19:32+08:00 ] 172.17.230.83 223.104.65.73 GET /storyfm
+[ info ] www.51mfgs.com/storyfm [运行时间：0.357999s][吞吐率：2.79req/s] [内存消耗：724.39kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'storyfm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'accept-encoding' => 'gzip',
+  'charset' => 'utf-8',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'referer' => 'https://servicewechat.com/wx503527dc340335fb/10/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 7.0; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/56.0.2924.87 Mobile Safari/537.36 MicroMessenger/6.7.3.1360(0x2607033A) NetType/4G Language/zh_CN Process/appbrand0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->storyfm[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010934s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `story` [ RunTime:0.003605s ]
+[ sql ] [ SQL ] SELECT * FROM `story` WHERE  `state` = 1  AND `pos` = 1 ORDER BY id DESC LIMIT 1 [ RunTime:0.003064s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wxuser` [ RunTime:0.003410s ]
+[ sql ] [ SQL ] SELECT * FROM `wxuser` WHERE  `user_phone` IN ('0') [ RunTime:0.003790s ]

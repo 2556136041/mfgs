@@ -1,0 +1,3587 @@
+---------------------------------------------------------------
+[ 2019-07-02T00:56:49+08:00 ] 172.17.230.83 46.229.168.152 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.119620s][吞吐率：8.36req/s] [内存消耗：388.77kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T00:56:51+08:00 ] 172.17.230.83 46.229.168.161 GET /
+[ info ] 51mfgs.com/ [运行时间：0.195283s][吞吐率：5.12req/s] [内存消耗：798.08kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011262s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004045s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.006300s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004041s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004809s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002995s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004188s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004464s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.011700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004607s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005086s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003548s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002342s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002617s ]
+---------------------------------------------------------------
+[ 2019-07-02T03:14:51+08:00 ] 172.17.230.83 42.156.138.42 GET /proshow/id/207
+[ info ] www.51mfgs.com/proshow/id/207 [运行时间：0.121820s][吞吐率：8.21req/s] [内存消耗：712.28kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.51mfgs.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 YisouSpider/5.0 Safari/537.36',
+  'x-devtools-emulate-network-conditions-client-id' => 'F1525182AFA05C64305F490F55D8F957',
+)
+[ info ] [ PARAM ] array (
+  'id' => '207',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011332s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004587s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 207 LIMIT 1 [ RunTime:0.002440s ]
+---------------------------------------------------------------
+[ 2019-07-02T04:02:02+08:00 ] 172.17.230.83 54.36.148.146 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.057500s][吞吐率：17.39req/s] [内存消耗：388.66kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T04:02:03+08:00 ] 172.17.230.83 54.36.150.6 GET /
+[ info ] 51mfgs.com/ [运行时间：0.137943s][吞吐率：7.25req/s] [内存消耗：797.76kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008581s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004239s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003716s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004841s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003780s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003613s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003572s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003899s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004148s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.005341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004349s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003994s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.005309s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003219s ]
+---------------------------------------------------------------
+[ 2019-07-02T04:12:16+08:00 ] 172.17.230.83 157.55.39.4 GET /
+[ info ] 51mfgs.com/ [运行时间：0.740042s][吞吐率：1.35req/s] [内存消耗：798.23kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013007s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.006313s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004902s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003984s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004429s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005905s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005117s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.004663s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008510s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.005122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.005624s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005510s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.004689s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.005681s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.006218s ]
+---------------------------------------------------------------
+[ 2019-07-02T04:12:19+08:00 ] 172.17.230.83 157.55.39.4 GET /
+[ info ] 51mfgs.com/ [运行时间：0.174674s][吞吐率：5.72req/s] [内存消耗：798.08kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008594s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003388s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003045s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003444s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002926s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003374s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003620s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003991s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003378s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002775s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003064s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002707s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.005257s ]
+---------------------------------------------------------------
+[ 2019-07-02T04:33:08+08:00 ] 172.17.230.83 46.229.168.139 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.044115s][吞吐率：22.67req/s] [内存消耗：388.78kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T04:33:10+08:00 ] 172.17.230.83 46.229.168.162 GET /proshow/id/20
+[ info ] 51mfgs.com/proshow/id/20 [运行时间：0.070712s][吞吐率：14.14req/s] [内存消耗：711.57kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '20',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007182s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003755s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 20 LIMIT 1 [ RunTime:0.003092s ]
+---------------------------------------------------------------
+[ 2019-07-02T05:06:31+08:00 ] 172.17.230.83 157.55.39.38 GET /jj.html
+[ info ] 51mfgs.com/jj.html [运行时间：0.086302s][吞吐率：11.59req/s] [内存消耗：628.08kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'jj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->jj[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/jj.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008411s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.007498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 LIMIT 1 [ RunTime:0.003423s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.003676s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 LIMIT 1 [ RunTime:0.003140s ]
+---------------------------------------------------------------
+[ 2019-07-02T05:09:35+08:00 ] 172.17.230.83 66.249.64.28 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.038099s][吞吐率：26.25req/s] [内存消耗：388.88kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/plain,text/html,*/*',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T05:09:36+08:00 ] 172.17.230.83 66.249.64.29 GET /css/pro_center.css
+[ info ] 51mfgs.com/css/pro_center.css [运行时间：0.038615s][吞吐率：25.90req/s] [内存消耗：395.59kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-encoding' => 'gzip,deflate,br',
+  'accept-language' => 'en-US',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => '51mfgs.com',
+  'referer' => 'http://51mfgs.com/pro/pro_sj_center.php',
+  'user-agent' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T05:10:23+08:00 ] 172.17.230.83 66.249.64.29 GET /pro/pro_jj_center.php
+[ info ] 51mfgs.com/pro/pro_jj_center.php [运行时间：0.028693s][吞吐率：34.85req/s] [内存消耗：221.25kb] [文件加载：29]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'proinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'amp-cache-transform' => 'google;v="1..2"',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'pro_jj_center.php',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T05:13:43+08:00 ] 172.17.230.83 66.249.64.27 GET /pro/pro_sj_center.php
+[ info ] 51mfgs.com/pro/pro_sj_center.php [运行时间：0.059845s][吞吐率：16.71req/s] [内存消耗：221.25kb] [文件加载：29]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'proinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'amp-cache-transform' => 'google;v="1..2"',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'pro_sj_center.php',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T05:25:14+08:00 ] 172.17.230.83 34.76.11.208 GET /
+[ info ] 51mfgs.com/ [运行时间：0.142365s][吞吐率：7.02req/s] [内存消耗：797.73kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'facebookexternalhit/1.1 (compatible;)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009976s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.005147s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005430s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005127s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003285s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004769s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004431s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.004742s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003786s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.005450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004886s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.004039s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003147s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004003s ]
+---------------------------------------------------------------
+[ 2019-07-02T06:01:27+08:00 ] 172.17.230.83 42.156.136.30 GET /b2.html
+[ info ] www.51mfgs.com/b2.html [运行时间：0.059338s][吞吐率：16.85req/s] [内存消耗：387.90kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'b2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.51mfgs.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 YisouSpider/5.0 Safari/537.36',
+  'x-devtools-emulate-network-conditions-client-id' => '645FA68FA97F3E068EF23CE9C23E6BDE',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->b2[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/banwu/b2.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T06:15:06+08:00 ] 172.17.230.83 157.55.39.243 GET /user/reg.php
+[ info ] 51mfgs.com/user/reg.php [运行时间：0.076409s][吞吐率：13.09req/s] [内存消耗：225.76kb] [文件加载：29]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'userinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'reg.php',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T07:58:51+08:00 ] 172.17.230.83 157.55.39.38 GET /a2.html
+[ info ] 51mfgs.com/a2.html [运行时间：0.057826s][吞吐率：17.29req/s] [内存消耗：387.48kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'a2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->a2[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/banwu/a2.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T08:22:39+08:00 ] 172.17.230.83 46.229.168.136 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.085738s][吞吐率：11.66req/s] [内存消耗：388.78kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T08:22:40+08:00 ] 172.17.230.83 46.229.168.149 GET /leavemessage.html
+[ info ] 51mfgs.com/leavemessage.html [运行时间：0.186171s][吞吐率：5.37req/s] [内存消耗：810.00kb] [文件加载：52]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'leavemessage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->leavemessage[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] ./template/leavemessage/index.html [ array (
+  0 => 'list',
+  1 => 'total',
+  2 => 'class',
+  3 => 'now',
+  4 => 'data',
+  5 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011557s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mes` [ RunTime:0.007222s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mes` WHERE  `state` = 1 LIMIT 1 [ RunTime:0.003245s ]
+[ sql ] [ SQL ] SELECT * FROM `mes` WHERE  `state` = 1 LIMIT 0,15 [ RunTime:0.003227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004114s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.003475s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.004039s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mes` WHERE  `state` = 1 LIMIT 1 [ RunTime:0.003301s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` IS NULL LIMIT 1 [ RunTime:0.003447s ]
+[ sql ] [ SQL ] SELECT * FROM `mes` WHERE  `state` = 1 ORDER BY createtime DESC [ RunTime:0.003545s ]
+---------------------------------------------------------------
+[ 2019-07-02T08:41:19+08:00 ] 172.17.230.83 185.172.110.74 GET /.git/config
+[ info ] 51mfgs.com/.git/config [运行时间：0.037805s][吞吐率：26.45req/s] [内存消耗：388.77kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => '.git',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 2.2; en-us; Sprint APA9292KT Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T08:41:21+08:00 ] 172.17.230.83 185.172.110.74 GET /.git/config
+[ info ] 51mfgs.com/.git/config [运行时间：0.039221s][吞吐率：25.50req/s] [内存消耗：388.67kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => '.git',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML like Gecko) Version/7.2.1.0 Safari/536.2+',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T09:05:37+08:00 ] 172.17.230.83 47.100.104.184 GET /
+[ info ] 51mfgs.com/ [运行时间：0.119921s][吞吐率：8.34req/s] [内存消耗：797.81kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007364s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003745s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003031s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003059s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003068s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003097s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002944s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005923s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003542s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003200s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003081s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002854s ]
+---------------------------------------------------------------
+[ 2019-07-02T09:08:11+08:00 ] 172.17.230.83 157.55.39.49 GET /robots.txt
+[ info ] www.51mfgs.com/robots.txt [运行时间：0.038883s][吞吐率：25.72req/s] [内存消耗：389.24kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T09:22:16+08:00 ] 172.17.230.83 47.92.151.67 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.106200s][吞吐率：9.42req/s] [内存消耗：797.81kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006075s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003121s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002391s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002303s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002400s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002287s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002269s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002826s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002228s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003225s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002616s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.001994s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-07-02T09:48:20+08:00 ] 172.17.230.83 54.149.52.2 GET /
+[ info ] 51mfgs.com/ [运行时间：0.176395s][吞吐率：5.67req/s] [内存消耗：797.58kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Go-http-client/1.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011251s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.005345s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003102s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004497s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003036s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003369s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004659s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002985s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003534s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002826s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.005153s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003019s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003304s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002600s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002744s ]
+---------------------------------------------------------------
+[ 2019-07-02T10:24:30+08:00 ] 172.17.230.83 42.236.12.150 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.133082s][吞吐率：7.51req/s] [内存消耗：798.33kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.51mfgs.com',
+  'referer' => 'https://www.51mfgs.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008856s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004239s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003449s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004313s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003451s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004896s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004054s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.004129s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003684s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003097s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003873s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.006806s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003689s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002863s ]
+---------------------------------------------------------------
+[ 2019-07-02T10:24:33+08:00 ] 172.17.230.83 42.236.12.130 GET /
+[ info ] 51mfgs.com/ [运行时间：0.117997s][吞吐率：8.47req/s] [内存消耗：798.33kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => '51mfgs.com',
+  'referer' => 'https://51mfgs.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008890s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.005470s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003046s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003823s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003091s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002585s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002139s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003452s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002090s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003155s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003566s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002581s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002394s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002873s ]
+---------------------------------------------------------------
+[ 2019-07-02T10:33:57+08:00 ] 172.17.230.83 101.132.69.5 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.120609s][吞吐率：8.29req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008234s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003821s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003192s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003160s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003293s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003351s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003281s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003820s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002922s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003554s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003018s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003500s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002783s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002730s ]
+---------------------------------------------------------------
+[ 2019-07-02T10:51:37+08:00 ] 172.17.230.83 106.14.189.11 GET /
+[ info ] 51mfgs.com/ [运行时间：0.111449s][吞吐率：8.97req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007539s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.002979s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002320s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002325s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002542s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002258s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003205s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002669s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003076s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003835s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002325s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001914s ]
+---------------------------------------------------------------
+[ 2019-07-02T11:27:51+08:00 ] 172.17.230.83 207.46.13.74 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.119426s][吞吐率：8.37req/s] [内存消耗：798.23kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => 'www.51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007226s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003847s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003989s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003365s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003316s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003131s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005799s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003668s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003792s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002929s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003282s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002919s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002872s ]
+---------------------------------------------------------------
+[ 2019-07-02T11:32:29+08:00 ] 172.17.230.83 42.236.12.150 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.142193s][吞吐率：7.03req/s] [内存消耗：798.33kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => 'www.51mfgs.com',
+  'referer' => 'https://www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006704s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004202s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003396s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003299s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003547s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.010033s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004076s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005107s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004223s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003830s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003429s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004969s ]
+---------------------------------------------------------------
+[ 2019-07-02T11:32:36+08:00 ] 172.17.230.83 42.236.99.178 GET /index.php
+[ info ] 51mfgs.com/index.php [运行时间：0.135083s][吞吐率：7.40req/s] [内存消耗：798.35kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => '51mfgs.com',
+  'referer' => 'http://51mfgs.com/index.php',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008558s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003805s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003077s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003682s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.006574s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003134s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003225s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003763s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004205s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003445s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.004807s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003259s ]
+---------------------------------------------------------------
+[ 2019-07-02T11:37:06+08:00 ] 172.17.230.83 46.229.168.162 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.063443s][吞吐率：15.76req/s] [内存消耗：388.78kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T11:37:07+08:00 ] 172.17.230.83 46.229.168.151 GET /yw.html
+[ info ] 51mfgs.com/yw.html [运行时间：0.084416s][吞吐率：11.85req/s] [内存消耗：625.60kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'yw',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->yw[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/yw.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006055s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003922s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 LIMIT 1 [ RunTime:0.002754s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.003236s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 LIMIT 1 [ RunTime:0.002664s ]
+---------------------------------------------------------------
+[ 2019-07-02T11:38:58+08:00 ] 172.17.230.83 42.236.99.142 GET /
+[ info ] 51mfgs.com/ [运行时间：0.123093s][吞吐率：8.12req/s] [内存消耗：798.33kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'accept-language' => 'zh-CN',
+  'connection' => 'Keep-Alive',
+  'cookie' => '',
+  'host' => '51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36; 360Spider',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009075s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003486s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003125s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002604s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002358s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002244s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002444s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002852s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003183s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002666s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002384s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002015s ]
+---------------------------------------------------------------
+[ 2019-07-02T12:18:16+08:00 ] 172.17.230.83 46.229.168.137 GET /proshow/id/198
+[ info ] 51mfgs.com/proshow/id/198 [运行时间：0.073715s][吞吐率：13.57req/s] [内存消耗：711.59kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/6~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '198',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006209s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.006531s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 198 LIMIT 1 [ RunTime:0.002558s ]
+---------------------------------------------------------------
+[ 2019-07-02T12:53:53+08:00 ] 172.17.230.83 40.77.167.60 GET /jd.html
+[ info ] 51mfgs.com/jd.html [运行时间：0.125007s][吞吐率：8.00req/s] [内存消耗：623.88kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'jd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->jd[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/jd.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012856s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003584s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 LIMIT 1 [ RunTime:0.002216s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.004720s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 LIMIT 1 [ RunTime:0.004426s ]
+---------------------------------------------------------------
+[ 2019-07-02T12:59:50+08:00 ] 172.17.230.83 67.21.36.3 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.039150s][吞吐率：25.54req/s] [内存消耗：388.23kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 zgrab/0.x',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T13:37:44+08:00 ] 172.17.230.83 47.92.110.185 GET /
+[ info ] 51mfgs.com/ [运行时间：0.142984s][吞吐率：6.99req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007757s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.005651s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004917s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004890s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005547s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.006271s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004682s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.004556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004968s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.005031s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004178s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.004498s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003606s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003557s ]
+---------------------------------------------------------------
+[ 2019-07-02T13:38:22+08:00 ] 172.17.230.83 106.14.204.78 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.116528s][吞吐率：8.58req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006448s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.002954s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002512s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002403s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002272s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002052s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002020s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002179s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002762s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002019s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.002733s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002777s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002346s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002156s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010319s ]
+---------------------------------------------------------------
+[ 2019-07-02T13:39:01+08:00 ] 172.17.230.83 47.100.51.108 GET /
+[ info ] 51mfgs.com/ [运行时间：0.177767s][吞吐率：5.63req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010419s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003722s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003009s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002792s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002803s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003344s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002907s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003858s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003460s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002798s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003120s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003062s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002745s ]
+---------------------------------------------------------------
+[ 2019-07-02T13:41:05+08:00 ] 172.17.230.83 47.100.51.203 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.178952s][吞吐率：5.59req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009530s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003473s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002641s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002666s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002546s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003067s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002675s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004969s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002906s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003712s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003371s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002551s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002487s ]
+---------------------------------------------------------------
+[ 2019-07-02T14:05:17+08:00 ] 172.17.230.83 117.136.79.162 GET /dshserver
+[ info ] www.51mfgs.com/dshserver [运行时间：0.040296s][吞吐率：24.82req/s] [内存消耗：387.88kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'dshserver',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'br, gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'connection' => 'keep-alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.4(0x17000428) NetType/4G Language/zh_CN',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->dshserver[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/dsk/dskindex.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T14:11:48+08:00 ] 172.17.230.83 47.92.29.149 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.170744s][吞吐率：5.86req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008951s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.002950s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002955s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003012s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003107s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003118s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002462s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003665s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002864s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.002842s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002752s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002590s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.001956s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001936s ]
+---------------------------------------------------------------
+[ 2019-07-02T14:18:32+08:00 ] 172.17.230.83 39.107.126.72 GET /
+[ info ] 51mfgs.com/ [运行时间：0.153353s][吞吐率：6.52req/s] [内存消耗：797.77kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 4.1.1; Nexus 7 Build/JRO03D))',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014153s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.005643s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004957s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005090s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.006203s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005409s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004448s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.005167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005806s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.004728s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004634s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.006261s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.004771s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.005139s ]
+---------------------------------------------------------------
+[ 2019-07-02T14:25:42+08:00 ] 172.17.230.83 42.156.254.107 GET /proorder/id/84
+[ info ] www.51mfgs.com/proorder/id/84 [运行时间：0.041396s][吞吐率：24.16req/s] [内存消耗：393.32kb] [文件加载：37]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'host' => 'www.51mfgs.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 YisouSpider/5.0 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] app\index\controller\Index->proorder[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T14:27:21+08:00 ] 172.17.230.83 202.104.129.54 GET /favicon.ico
+[ info ] 51mfgs.com/favicon.ico [运行时间：0.038416s][吞吐率：26.03req/s] [内存消耗：389.16kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T14:27:26+08:00 ] 172.17.230.83 202.104.129.54 GET /
+[ info ] 51mfgs.com/ [运行时间：0.110859s][吞吐率：9.02req/s] [内存消耗：798.43kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'connection' => 'keep-alive',
+  'host' => '51mfgs.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006653s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003192s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002550s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002370s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002663s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002591s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002599s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002697s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003055s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.002863s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003090s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002489s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003594s ]
+---------------------------------------------------------------
+[ 2019-07-02T14:34:34+08:00 ] 172.17.230.83 180.163.220.4 GET /
+[ info ] 51mfgs.com/ [运行时间：0.119194s][吞吐率：8.39req/s] [内存消耗：800.01kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'referer' => 'http://www.baidu.com/',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) baidu.sogo.uc.Chrome/36.0.1985.125 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006160s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004037s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003035s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003066s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002926s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003211s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003134s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002915s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003984s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003863s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003371s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002802s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003940s ]
+---------------------------------------------------------------
+[ 2019-07-02T15:47:05+08:00 ] 172.17.230.83 66.249.64.50 GET /robots.txt
+[ info ] www.51mfgs.com/robots.txt [运行时间：0.038089s][吞吐率：26.25req/s] [内存消耗：388.88kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/plain,text/html,*/*',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T15:47:07+08:00 ] 172.17.230.83 66.249.64.52 GET /.well-known/assetlinks.json
+[ info ] www.51mfgs.com/.well-known/assetlinks.json [运行时间：0.039904s][吞吐率：25.06req/s] [内存消耗：389.34kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => '.well-known',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T17:06:33+08:00 ] 172.17.230.83 106.11.158.90 GET /a2.html
+[ info ] www.51mfgs.com/a2.html [运行时间：0.038751s][吞吐率：25.81req/s] [内存消耗：387.90kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'a2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.51mfgs.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 YisouSpider/5.0 Safari/537.36',
+  'x-devtools-emulate-network-conditions-client-id' => '5F87915F5F1A1667B92CA19F1A4D4A87',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->a2[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/banwu/a2.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T18:11:34+08:00 ] 172.17.230.83 112.97.63.24 GET /dshserver
+[ info ] www.51mfgs.com/dshserver [运行时间：0.040471s][吞吐率：24.71req/s] [内存消耗：387.88kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'dshserver',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'br, gzip, deflate',
+  'accept-language' => 'zh-cn',
+  'connection' => 'keep-alive',
+  'host' => 'www.51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.4(0x17000428) NetType/4G Language/zh_CN',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->dshserver[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/dsk/dskindex.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T18:15:31+08:00 ] 172.17.230.83 54.187.37.228 GET /
+[ info ] 51mfgs.com/ [运行时间：0.273567s][吞吐率：3.66req/s] [内存消耗：797.92kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016304s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.007580s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004297s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005025s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004736s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005967s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005332s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.005890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004527s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.006023s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004309s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.005092s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.004024s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.005293s ]
+---------------------------------------------------------------
+[ 2019-07-02T19:48:10+08:00 ] 172.17.230.83 207.46.13.81 GET /c2.html
+[ info ] 51mfgs.com/c2.html [运行时间：0.043733s][吞吐率：22.87req/s] [内存消耗：387.48kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'c2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->c2[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/banwu/c2.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T19:52:17+08:00 ] 172.17.230.83 220.181.108.140 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.194346s][吞吐率：5.15req/s] [内存消耗：797.95kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn,zh-tw',
+  'host' => 'www.51mfgs.com',
+  'if-none-match' => '""""@NULL@""""',
+  'user-agent' => 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010552s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004084s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003234s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003076s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003042s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003294s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003864s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003150s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004805s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.003918s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003037s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.004068s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003409s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003842s ]
+---------------------------------------------------------------
+[ 2019-07-02T20:20:26+08:00 ] 172.17.230.83 207.46.13.74 GET /cw.html
+[ info ] 51mfgs.com/cw.html [运行时间：0.090043s][吞吐率：11.11req/s] [内存消耗：625.60kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'cw',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->cw[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/cw.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008669s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.009151s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 LIMIT 1 [ RunTime:0.007609s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.004117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 LIMIT 1 [ RunTime:0.004663s ]
+---------------------------------------------------------------
+[ 2019-07-02T20:46:48+08:00 ] 172.17.230.83 46.229.168.131 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.037728s][吞吐率：26.51req/s] [内存消耗：388.78kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T20:46:50+08:00 ] 172.17.230.83 46.229.168.163 GET /proshow/id/224
+[ info ] 51mfgs.com/proshow/id/224 [运行时间：0.070297s][吞吐率：14.23req/s] [内存消耗：711.76kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '224',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007233s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003681s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 224 LIMIT 1 [ RunTime:0.002993s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:49+08:00 ] 172.17.230.83 94.232.57.231 GET /
+[ info ] 51mfgs.com/ [运行时间：0.226307s][吞吐率：4.42req/s] [内存消耗：798.20kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'connection' => 'close',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014046s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003228s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002586s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003204s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003746s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002190s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002161s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.002150s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002941s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.002134s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004082s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.002142s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002471s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002475s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002072s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:54+08:00 ] 172.17.230.83 94.242.58.14 GET /leavemessage.html
+[ info ] 51mfgs.com/leavemessage.html [运行时间：0.171109s][吞吐率：5.84req/s] [内存消耗：817.05kb] [文件加载：52]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'leavemessage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->leavemessage[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ VIEW ] ./template/leavemessage/index.html [ array (
+  0 => 'list',
+  1 => 'total',
+  2 => 'class',
+  3 => 'now',
+  4 => 'data',
+  5 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012843s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mes` [ RunTime:0.003462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mes` WHERE  `state` = 1 LIMIT 1 [ RunTime:0.002525s ]
+[ sql ] [ SQL ] SELECT * FROM `mes` WHERE  `state` = 1 LIMIT 0,15 [ RunTime:0.003133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003305s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.002690s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.002931s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mes` WHERE  `state` = 1 LIMIT 1 [ RunTime:0.002425s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` IS NULL LIMIT 1 [ RunTime:0.002524s ]
+[ sql ] [ SQL ] SELECT * FROM `mes` WHERE  `state` = 1 ORDER BY createtime DESC [ RunTime:0.002719s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:55+08:00 ] 172.17.230.83 94.242.58.14 GET /about.html
+[ info ] 51mfgs.com/about.html [运行时间：0.126887s][吞吐率：7.88req/s] [内存消耗：614.14kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->about[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/about.html [ array (
+  0 => 'abouthits',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008083s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.002828s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 2 [ RunTime:0.002389s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002354s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:56+08:00 ] 172.17.230.83 94.242.58.14 GET /cw.html
+[ info ] 51mfgs.com/cw.html [运行时间：0.658509s][吞吐率：1.52req/s] [内存消耗：632.38kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'cw',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->cw[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/cw.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010687s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003680s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 LIMIT 1 [ RunTime:0.002986s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.003416s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'cw'  AND `state` = 1 LIMIT 1 [ RunTime:0.003215s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:57+08:00 ] 172.17.230.83 94.242.58.14 GET /sj.html
+[ info ] 51mfgs.com/sj.html [运行时间：0.158039s][吞吐率：6.33req/s] [内存消耗：651.90kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'sj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->sj[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/sj.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009044s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003379s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1 LIMIT 1 [ RunTime:0.002571s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.002752s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1 LIMIT 1 [ RunTime:0.002326s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:59+08:00 ] 172.17.230.83 94.242.58.14 GET /sp.html
+[ info ] 51mfgs.com/sp.html [运行时间：0.641543s][吞吐率：1.56req/s] [内存消耗：716.52kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'sp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->sp[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/sp.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006976s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003280s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1 LIMIT 1 [ RunTime:0.002270s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.002504s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1 LIMIT 1 [ RunTime:0.001894s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:06:59+08:00 ] 172.17.230.83 94.242.58.14 GET /yw.html
+[ info ] 51mfgs.com/yw.html [运行时间：0.135062s][吞吐率：7.40req/s] [内存消耗：632.53kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'yw',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->yw[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/yw.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008255s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.002819s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 LIMIT 1 [ RunTime:0.002023s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.002259s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1 LIMIT 1 [ RunTime:0.002561s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:07:01+08:00 ] 172.17.230.83 94.242.58.14 GET /jd.html
+[ info ] 51mfgs.com/jd.html [运行时间：0.077146s][吞吐率：12.96req/s] [内存消耗：630.66kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'jd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->jd[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/jd.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006320s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003620s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 LIMIT 1 [ RunTime:0.003089s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.003106s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1 LIMIT 1 [ RunTime:0.002661s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:07:01+08:00 ] 172.17.230.83 94.242.58.14 GET /jj.html
+[ info ] 51mfgs.com/jj.html [运行时间：0.083302s][吞吐率：12.00req/s] [内存消耗：634.86kb] [文件加载：45]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'jj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->jj[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/jj.html [ array (
+  0 => 'list',
+  1 => 'total',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005249s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.002928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 LIMIT 1 [ RunTime:0.002236s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 ORDER BY pubtime DESC LIMIT 0,100 [ RunTime:0.002423s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1 LIMIT 1 [ RunTime:0.008366s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:07:02+08:00 ] 172.17.230.83 94.242.58.14 GET /banwu.html
+[ info ] 51mfgs.com/banwu.html [运行时间：0.084970s][吞吐率：11.77req/s] [内存消耗：394.77kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'banwu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->banwu[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/banwu/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T21:07:03+08:00 ] 172.17.230.83 94.242.58.14 GET /qqlogin.html
+[ info ] 51mfgs.com/qqlogin.html [运行时间：0.110004s][吞吐率：9.09req/s] [内存消耗：398.56kb] [文件加载：38]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'qqlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->qqlogin[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T21:07:11+08:00 ] 172.17.230.83 94.242.58.14 GET /
+[ info ] 51mfgs.com/ [运行时间：0.132294s][吞吐率：7.56req/s] [内存消耗：800.13kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007226s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004519s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003893s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003864s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003578s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003737s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003883s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003654s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004530s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.003574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.004714s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003905s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.003604s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003548s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:07:12+08:00 ] 172.17.230.83 94.242.58.14 GET /reg.html
+[ info ] 51mfgs.com/reg.html [运行时间：0.116757s][吞吐率：8.56req/s] [内存消耗：394.76kb] [文件加载：35]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-US,en;q=0.5',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=v2v2eapji089ucf69n2iuok7f5',
+  'dnt' => '1',
+  'host' => '51mfgs.com',
+  'origin' => 'https://51mfgs.com',
+  'referer' => 'https://51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.2) Gecko/20061201 Firefox/2.0.0.2',
+  'via' => '1.0 px33 (squid/3.5.20)',
+  'x-forwarded-for' => '107.150.45.42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->reg[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] ./template/user/reg.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T21:21:31+08:00 ] 172.17.230.83 46.229.168.131 GET /proshow/id/17
+[ info ] 51mfgs.com/proshow/id/17 [运行时间：0.072078s][吞吐率：13.87req/s] [内存消耗：711.58kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'close',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '17',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008051s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.004612s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 17 LIMIT 1 [ RunTime:0.003553s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:33:58+08:00 ] 172.17.230.83 207.46.13.81 GET /proshow/id/84
+[ info ] 51mfgs.com/proshow/id/84 [运行时间：0.070937s][吞吐率：14.10req/s] [内存消耗：717.40kb] [文件加载：44]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'proshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'cache-control' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'from' => 'bingbot(at)microsoft.com',
+  'host' => '51mfgs.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '84',
+)
+[ info ] [ RUN ] app\index\controller\Index->proshow[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./app/index/view/index/proshow.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007268s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003950s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_id` = 84 LIMIT 1 [ RunTime:0.003580s ]
+---------------------------------------------------------------
+[ 2019-07-02T21:37:40+08:00 ] 172.17.230.83 54.36.148.67 GET /robots.txt
+[ info ] 51mfgs.com/robots.txt [运行时间：0.084640s][吞吐率：11.81req/s] [内存消耗：388.66kb] [文件加载：36]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'robots.txt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => '51mfgs.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->_empty[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/syu4378230001/htdocs/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-02T23:58:50+08:00 ] 172.17.230.83 123.125.71.89 GET /
+[ info ] www.51mfgs.com/ [运行时间：0.137115s][吞吐率：7.29req/s] [内存消耗：797.95kb] [文件加载：49]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn,zh-tw',
+  'host' => 'www.51mfgs.com',
+  'if-none-match' => '""""@NULL@""""',
+  'user-agent' => 'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] ./app/index/view/index/index.html [ array (
+  0 => 'indexhits',
+  1 => 'userclass',
+  2 => 'usersess',
+  3 => 'res_newpro',
+  4 => 'res_user',
+  5 => 'time',
+  6 => 'res_jj',
+  7 => 'res_jd',
+  8 => 'res_yw',
+  9 => 'res_sp',
+  10 => 'res_sj',
+  11 => 'res_cw',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009869s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro2` [ RunTime:0.003773s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004812s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'jd'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004373s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'yw'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.005065s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sp'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004250s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  `pro_type` = 'sj'  AND `state` = 1  AND `pos` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.003763s ]
+[ sql ] [ SQL ] SELECT * FROM `pro2` WHERE  (  `pro_type` = 'cw'  AND `state` = 1  AND `pos` = 1 ) [ RunTime:0.003952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003700s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `state` = 1 ORDER BY id DESC LIMIT 3 [ RunTime:0.005922s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pro` [ RunTime:0.005702s ]
+[ sql ] [ SQL ] SELECT * FROM `pro` WHERE  `pro_id` > 0  AND `state` = 1 ORDER BY pro_id DESC LIMIT 3 [ RunTime:0.004997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pagehits` [ RunTime:0.003649s ]
+[ sql ] [ SQL ] UPDATE `pagehits`  SET `hits`=hits+1  WHERE  `id` = 1 [ RunTime:0.002551s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `pagehits` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003144s ]

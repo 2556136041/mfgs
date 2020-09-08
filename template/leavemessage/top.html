@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>留言本</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+{literal}
+     *{font: 14px verdana;
+        }
+	 div#div_head{width:100%;
+	 	          height:155px;
+				  background-image:url(__img__/mes/tdtop1.jpg);
+	 	          /*background-repeat:repeat-x;*/
+				  margin-bottom:0px;
+	               }
+	 p#p_zw{width:100%;
+            height: 15px;
+            margin:0px auto;
+	        }
+	 p#p_marquee{width: 100%;
+                 height: 50px;
+                 clear: both;
+	              }
+
+	 #div_top{margin:0px auto;
+	          width:779px;
+			  height:100px;
+	          }
+	 p#p_img{width:30%;
+             height: 100%;
+             float: left;
+			 text-align:left;
+			 margin:0px;
+
+	          }
+	 p#p_nav{width: 70%;
+             height: 100%;
+             float: right;
+			 margin:0px;
+
+	          }
+     p#p_nav a{color: black; 
+	           text-decoration: none;
+                }
+     p#p_nav a:hover{color: red; 
+                      }
+{/literal}
+</style>
+</head>
+
+<body>
+<div id="div_head">
+    <p id="p_zw"></p>
+    <p id="p_marquee">
+        <marquee scrollamount="2" scrolldelay="80" height="50px">
+			 {if condition="!empty($Think.session.unc)"}			 
+			         欢迎{$Think.session.unc}登陆本站！
+			
+			 {else /}
+				    匿名用户，欢迎来到免费公社留言版！
+			 {/if}
+			 
+		</marquee>
+    </p>
+    <div id="div_top">
+       <p id="p_img"><a href="/index.html"><img style="width:100px;height: auto;border: 0;" src="__img__/newlogo2.png" alt=""></a></p>
+       <p id="p_nav" style="text-align: center;">    
+       <br /><br />
+      <a href="/index/Index/index">首&nbsp;&nbsp;页</a>&nbsp;|&nbsp;<a href="/publicmes.html">发表留言</a>&nbsp;|&nbsp;<a href="javascript:location.reload()" target="_self">刷新页面</a>&nbsp;
+       {if condition="$Think.session.unc neq null"}
+              <a href="/leavemess_logout.html">退出登录</a>&nbsp;
+		
+		{/if}
+        </p>
+    </div>
+      
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心</title>
+<link rel="stylesheet" href="__myspacecss__" />
+<link rel="stylesheet" href="__mymodify__" type="text/css" media="screen" />
+ <script src="/public/static/js/jquery/jquery3.0.js"></script>
+<style>
+a{
+    text-decoration:none;
+    color:black;
+  
+}
+</style>
+</head>
+<body>
+<div id="ps_top" style="background: {$color|default='lavender'}">
+  <h1>my space</h1>
+  <h4>【<a href="/myspace.html">个人中心</a>】</h4>
+  <p id="cut1"></p>
+  <p id="p_l"><a href="/index.html">首页</a></p>
+	<p id="p_m">{$time|date='Y-m-d',###}</p>
+  <p id="p_r"><a href="/logout.html">安全退出</a></p>
+	<p id="hidden"></p>
+</div>
+<div id="ps_main">
+    <div id="ps_left" style="width:26%;">
+        <table id="tab1" align="center" width="90%" border="0" cellpadding="5" cellspacing="10">
+          <tr>
+            <td style="text-align: center;">
+                 <img style="border-radius: 50%;" width="120px" src="{$userinfo.photo}" alt="" />
+            </td>
+          </tr>
+
+          <tr>
+              <td align="center"><font color="#FF0000">{$userinfo.username}</font></td> 
+
+          </tr>
+
+          <tr>
+              <th align="left">邮箱:</th>    
+          </tr>
+
+          <tr>
+              <td align="left">{$userinfo.email}</td>
+          </tr>
+
+          <tr>
+             <th align="left">Q&nbsp;Q:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.qq}</td>
+          </tr>
+
+          <tr>
+             <th align="left">电话:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.tel}</td>
+          </tr>
+
+          <tr>
+             <th align="left">地址:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.address}</td>
+          </tr>
+
+          <tr>
+              <th align="left">标签:</th>    
+          </tr>
+
+          <tr>
+              <td align="left">{$userinfo.usermark}</td>
+          </tr>
+
+          <tr>
+              <th align="left">兴趣:</th>    
+          </tr>  
+
+          <tr>
+              <td align="left">{$userinfo.inter}</td>
+          </tr>
+        </table>
+        <table id='tab2' width="90%" cellspacing="10px" cellpadding="5px" border="0" align='center'>
+          <tr>
+            <th align="right" id="th_fx">分享：</th>
+            <td><a href="/pubpro.html">发布</a></td>
+          </tr>
+          <tr align="left">
+            <td></td>
+            <td><a href="/mymodify/id/{$userinfo.id}">修改</a></td>
+          </tr>
+        </table>
+
+    </div>
+    <div id="ps_right" style="width:72%;">
+        <form id="form1" name="form1" method="post" action="/iupdate.html">
+        <article class="module width_full">
+          <header><h3>用户修改</h3></header>
+               <div class="module_content">
+                      <fieldset style="width:48%;float:left; margin-right: 3%;">
+                  <label>昵称</label>
+                  <input type="text" name="username" disabled="" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.username}">
+              </fieldset>
+              <fieldset style="width:48%; float:right;">
+                    <label>性别</label>
+                    <input type="text" name="sex" disabled="" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.sex}">
+              </fieldset><div class="clear"></div>
+                      <fieldset style="width:48%;float:left; margin-right: 3%;">
+                  <label>密码</label>
+                  <input type="text" name="pwd" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.pwd}">
+              </fieldset>
+              <fieldset style="width:48%; float:right;">
+                    <label>手机</label>
+                    <input type="text" name="tel" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.tel}">
+              </fieldset><div class="clear"></div>
+                      <fieldset style="width:48%;float:left; margin-right: 3%;">
+                  <label>邮箱</label>
+                  <input type="text" name="email" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.email}">
+              </fieldset>
+              <fieldset style="width:48%; float:right;">
+                    <label>地址</label>
+                    <input type="text" name="address" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.address}">
+              </fieldset><div class="clear"></div>
+                      <fieldset style="width:48%;float:left; margin-right: 3%;">
+                  <label>qq</label>
+                  <input type="text" name="qq" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.qq}">
+              </fieldset>
+              <fieldset style="width:48%; float:right;">
+                    <label>标签</label>
+                    <input type="text" name="usermark" style="width:92%;height:40px;font-size:18px;" value="{$userinfo.usermark}">
+              </fieldset><div class="clear"></div>             
+              
+                   </div>
+          <footer>
+            <div class="submit_link">
+                      <input type="hidden" name="id" value="{$userinfo.id}">
+                      <input type="hidden" name="username" value="{$userinfo.username}">
+                      <input type="hidden" name="regtime" value="{$userinfo.regtime}">
+                      <input type="hidden" name="sex" value="{$userinfo.sex}">
+                      <input type="hidden" name="lastlogintime" value="{$userinfo.lastlogintime}">
+              <input id='tjbut' type="submit" name="submit" value="修改" class="alt_btn">
+            </div>
+          </footer>
+        </article>
+        </form>
+
+    </div>
+</div>
+{literal}
+<script>
+     $("body").keydown(function() {
+          if (event.keyCode == "13") {//keyCode=13是回车键
+              $('#tjbut').click().css('background-color','red');
+          }
+    });  
+
+</script>
+{/literal}
+
+{include file="./template/myspace/bottom.html" /}	
+
+
+</body>
+</html>

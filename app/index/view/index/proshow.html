@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>proshow</title>
+<style type="text/css">
+#div_main{width: 600px;
+	      margin:20px auto;
+	      background:rgb(204,255,204);
+	      border-radius:5px; 
+}
+table{width:100%;
+      margin:0px;
+	  padding:0px;
+}
+th{text-align: right;}
+
+#allow{
+  background:rgb(204,204,102);
+  font:18px '微软雅黑';
+  text-align:center;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  text-decoration: none;
+  color:white;
+  padding:3px 15px;
+  }
+#allow:hover{
+	background-color: rgb(51,187,51);
+	color:white;
+  }
+#refuse{
+  background:red;
+  font:18px '微软雅黑';
+  text-align:center;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  text-decoration: none;
+  color:white;
+  padding:3px 15px;
+  }
+#refuse:hover{
+	background-color: red;
+	color:white;
+  }
+
+</style>
+</head>
+<body>
+{include file='common/top'}
+<div id="div_main">
+	<table border="0" cellspacing="10" cellpadding="10">
+		<tr>
+			<td colspan="2"><img width="100%" src="__img__/pro/{$data.pro_pic}" alt="" /></td>
+		</tr>
+        <tr>
+			<th>类别：</th>
+			{switch name="data.pro_type"}
+			    {case value="jj"}
+                      <td>家具</td>
+
+			    {/case}
+			    {case value="jd"}
+			           <td>家电</td>
+			    {/case}
+			    {case value="yw"}
+			           <td>衣物</td>
+			    {/case}
+			    {case value="cw"}
+			           <td>宠物</td>
+			    {/case}
+			    {case value="sp"}
+			           <td>私品</td>
+			    {/case}
+			     {case value="sj"}
+			           <td>书刊</td>
+			    {/case}
+			    {default /}未知
+			{/switch}			
+		</tr>
+		<tr>
+			<th>名称：</th>
+			<td>{$data.pro_name}</td>
+		</tr>
+	<!-- 	<tr>
+			<th>费用：</th>
+			<td>{$data.pro_price}</td>
+		</tr> -->
+		<tr>
+			<th>介绍：</th>
+			<td>{$data.pro_about}</td>
+		</tr>
+		<tr>
+			<th>条件：</th>
+			<td>{$data.pro_con}</td>
+		</tr>
+		<!-- <tr>
+			<td colspan="2">
+			<p style="padding:20px;"><img src="__img__/tb22.png" width="30px"  align="absmiddle" />&nbsp;&nbsp;<img src="__img__/tel.png" width="30px" height="30px" align="absmiddle" />&nbsp;&nbsp;<img src="__img__/QQ11.png" width="30px" height="30px" align="absmiddle" /></p>
+			</td>
+		</tr> -->
+		<tr>
+			<td colspan="2" align="center" style="padding-bottom: 30px;">
+			      {if condition="($data.remainnum >= 1)"} 
+                       <a id="allow" href="/proorder/id/{$data.pro_id}">我要了</a>
+                  {elseif condition="($data.remainnum == 0)"}
+                       <a id="refuse" href="javascript:void(0)">来晩了</a>
+                  {else /} 
+
+                  {/if}
+			      
+			</td>
+		</tr>
+	
+	</table>
+</div>
+</body>
+</html>
+</html>

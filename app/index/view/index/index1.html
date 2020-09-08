@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="免费公社网：一对一的个人私品分享平台">
+<meta name="keywords" content="家具、家电、衣物、书刊、私品等自由馈赠免费领取">
+<link rel="shortcut icon" href="__img__/favicon1.ico" type="image/x-icon" />
+<meta name="baidu-site-verification" content="cBjfCIUmX8" />
+<meta name="360-site-verification" content="2f7f9f66f6e5ac8e035df6ead74392ea" />
+<meta name="sogou_site_verification" content="QjlImBuxRJ"/>
+
+<title>免费公社</title>
+<link rel="stylesheet" href="__frontcss__/index.css" type="text/css"  />
+<style type="text/css">
+{literal}
+
+/*loading style***************************************************/
+.loading{
+  width:100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+.pic{
+  width: 0%;
+  height: 5px;
+  background: green;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*mes*/
+
+div#div_mes
+{
+   width:100%;
+   height: 400px;
+   background-image: url("__img__/mesbg4.jpg");
+   color:rgb(255,255,200);
+   font-size:25px;
+   display:none;
+
+}
+
+div#div_mes h2
+{
+   text-align: center;
+   padding-top: 25px;
+   font-family:"微软雅黑" ;
+   margin-bottom:20px;
+
+}
+div#div_mes p
+{
+   font-size: 18px;
+   font-family: "微软雅黑";
+   width: 80%;
+   text-indent: 2em;
+   margin:10px auto;
+   line-height: 2em;
+   text-align: justify;   
+}
+#closemes
+{
+   padding: 3px 5px;
+
+}
+
+
+/*login*/
+#login_cover
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity:0.9;
+  display: none;
+
+}
+#login_modal
+{
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+
+}
+#login_closer
+{
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: black;
+
+}
+#login_closer a
+{
+  color:black;
+}
+#login_closer a:hover
+{
+  color:red;
+  -webkit-animation: 3s;
+  -o-animation: 3s;
+  animation: 3s;
+}
+#login_tab
+{
+  width:400px;
+  margin: 50px auto;
+   
+}
+.logintab_th
+{
+   width: 20%;
+}
+.logintab_td
+{ 
+  width: 100%;
+
+}
+button#tjbut{
+     height:45px;
+     width:100%;     
+     font:20px "Microsoft Yahei";
+     line-height: 45px;
+     background: rgb(204,204,102);
+     border-radius: 15px;
+
+}
+button#tjbut:hover{
+     color:white;
+     background: red;
+}
+input.inp1
+{
+    height:40px;
+    font-size:16px;
+    border:1px solid gray;
+    width: 95%;
+    padding-left: 10px;
+    border-radius:8px;
+}
+.user_icon
+{
+   background:url(__img__/user_icon.jpg) right center no-repeat;
+}
+{/literal}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+
+function login(obj){
+    var login_cover=document.getElementById('login_cover');
+    var login_modal=document.getElementById('login_modal');
+    var login_closer=document.getElementById('login_closer');
+    login_cover.style.display='block';
+    login_closer.onclick=function(){
+      login_cover.style.display='none';
+    }
+
+}
+
+</script>
+</head>
+
+<body>
+<!-- loading -->
+<div class="loading">
+  <div class="pic"></div>
+</div>
+
+<!-- login -->
+<div id="login_cover">
+  <div id="login_modal">
+     <span id="login_closer"><a href="javascript:void(0);">×</a></span>
+      <table id="login_tab" border="0" cellpadding="0" cellspacing="15">
+        <tr>
+           <td colspan="2"><h2 style="text-align: center;">用户登陆</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="logintab_td"><input onfocus="this.placeholder=''" onblur="this.placeholder='用户名请输入'" type="text" class="inp1 user_icon" name='username' onkeydown="switchKey(document.getElementById('pwd'))" id="username" placeholder="用户名" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="logintab_td"><input onfocus="this.placeholder=''" onblur="this.placeholder='密码'" type="password" class="inp1 user_icon" name='pwd' onkeydown="switchKey(document.getElementById('username'))" id="pwd" placeholder="密码" /></td>
+        </tr>
+        <tr>
+              <td>
+                  <span style="float: left;"><input type="radio" value="7" name="savetime" id="savetime" checked="checked" /><label for="savetime">保存7天</label></span>                  
+                  <span style="float:right;"><a href="#">忘记密码?</a>
+    </span>       
+              </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+            <button id="tjbut" onclick="login_ajax()">登陆</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+            <p id="login_rel"></p>
+
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">
+                其他登陆方式:&nbsp;<a href="/qqlogin.html"><img align="top" border="0" src="__img__/QQ.jpg" width="30px"></a>
+            </td>
+            <td align='right'><a href="/reg.html">注册</a></td>
+        </tr>
+      </table>
+  </div>
+</div>
+{literal}
+<script>
+//切换表单焦点
+function switchKey(obj){
+       if(event.keyCode==40){
+             obj.focus();
+       }
+
+}
+
+//点击登陆
+function login_ajax(){
+    var username=$('#username').val();
+    var pwd=$('#pwd').val();
+    $.get("/login_ok.html",
+        {"username":username,"pwd":pwd},function(data){
+        if(data==0){
+             setTimeout(function(){
+                   $('#tjbut').css("background-color","red").css('color','white').text('登陆...');
+                   window.location="/index.html"; 
+             },1000); 
+        }else{
+            alert('失败！');
+        }
+    });
+}
+
+//按回车键登陆
+$("body").keydown(function() {
+    if (event.keyCode == "13") {//keyCode=13是回车键
+        var username=$('#username').val();
+        var pwd=$('#pwd').val();
+        $.get("/login_ok.html",
+            {"username":username,"pwd":pwd},function(data){
+            if(data==0){
+                 setTimeout(function(){
+                     $('#tjbut').css("background-color","red").css('color','white').text('登陆...');
+                     window.location="/index.html"; 
+                 },1000);
+                 
+            }else{
+                alert('失败！');
+            }
+        });        
+    }
+});  
+
+/*
+$("#login_modal").mousedown(function(e){
+    $("#login_modal").css("position","relative");
+    $("#login_modal").css("left",endx).css("top",endy);
+    var endx=0;     
+    var endy=0;      
+    var left= parseInt($("#login_modal").css("left"));     
+    var top = parseInt($("#login_modal").css("top"));       
+    var downx=e.pageX;     
+    var downy=e.pageY; 
+    $("#login_modal").bind("mousemove",function(es){        
+    var endx= es.pageX-downx+left;       
+    var endy=es.pageY-downy+top;   
+    $("#login_modal").css("left",endx+"px").css("top",endy+"px");
+    });
+});         
+$("#login_modal").mouseup(function(){$("#login_modal").unbind("mousemove")});
+*/
+</script>
+{/literal}
+<!-- message -->
+<script>
+$(document).ready(function(){
+      $("#closemes").click(function(){
+           $("#div_mes").slideUp(3000);
+      });
+});
+
+</script>
+<div id="div_mes">
+<p style="height:60px;"></p>
+<h2>本站正式上线啦</h2>
+<p>免费公社正式上线啦!这是一个属于大家的个人私品共享平台，在免费公社实行的是真正的免费，不需要任何费用，你就可以索取到别人共享出来的物品，你也可以将物品放在平台上奉献给别人领取。这样做的目的在于倡导节约和可循环利用，详情请阅读<a style="color:rgb(255,255,100);" onmouseover="this.style.color='red';" onmouseout="this.style.color='rgb(255,255,100)';" href="/about.html">[关于本站]</a>。&nbsp;&nbsp;<a style="color:rgb(255,255,100);float:right;" id="closemes" onmouseover="this.style.color='red';" onmouseout="this.style.color='rgb(255,255,100)';" href="javascript:void(0))">点击关闭</a>
+</p>
+</div>
+<!-- 头部 -->
+<div id="div_head">
+<div id="div_top">
+<p id="p_l">
+&nbsp;&nbsp;&nbsp;
+{if condition="($Think.cookie.qq_accesstoken eq null) OR ($Think.cookie.qq_openid eq null)"}  
+    {if condition="$usersess"}
+        {switch name='userclass'}
+             {case value='1'}
+                  欢迎<font style='color:red;'>{$Think.session.unc}</font>来到本站！&nbsp;<a href='/admin.html'>后台管理</a>&nbsp;<a href="/logout">注销</a>    
+             {/case}
+             {case value='2'}
+                  欢迎<font style='color:red;'>{$Think.session.unc}</font>来到本站！&nbsp;<a href='/admin.html'>后台管理</a>&nbsp;<a href="/logout">注销</a>    
+             {/case}
+             {case value='0'}
+                  欢迎<font style='color:red;'>{$Think.session.unc}</font>来到本站！&nbsp;<a href='/myspace.html'>个人中心</a>&nbsp;<a href='/logout'>注销</a>   
+             {/case}      
+        {/switch}
+    {else /}
+        欢迎来到本站！&nbsp;<a href='/reg.html'>注册</a>&nbsp;&nbsp;<a href='#' onclick="login()" >登陆</a>&nbsp;&nbsp;<a href='/qqlogin.html'><img style="height:30px;vertical-align:middle;
+" src="__img__/qqz.png" />&nbsp;QQ登陆</a>
+
+    {/if}
+{else /}
+    <a href="/myspace.html">个人中心</a>&nbsp;<img align="top" src="{$Think.cookie.userimg}" style="vertical-align:middle;border-radius: 50%;height: 30px;" />&nbsp;<a href="/qqlogout">退出QQ</a>
+{/if}
+
+&nbsp;&nbsp;<a href="/banwu.html">版务</a>
+
+<!-- 
+{switch name="userclass"}
+{case value='1'}
+&nbsp欢迎<font style='color:red;'>{$Think.session.unc}</font>来到本站！&nbsp;<a href="/admin.html">后台管理</a>&nbsp;<a href="/logout">注销</a>
+{/case}
+{case value='0'}
+&nbsp欢迎<font style='color:red;'>{$Think.session.unc}</font>来到本站！&nbsp;<a href="/myspace.html">个人中心</a>&nbsp;<a href="/logout">注销</a>
+{/case}
+{default/}
+&nbsp欢迎来到本站！&nbsp;<a href="/reg.html" >注册</a>&nbsp;&nbsp;<a href="#" onclick="login()" >登陆</a>&nbsp;&nbsp;<a href='/qqlogin.html'>QQ登陆</a>
+<a href="/banwu">版务</a>
+{/switch} -->
+
+</p>
+<p id="p_r"><font style="color:red;">{$time}</font></p>
+</div>
+<!-- logo -->
+<div id="div_logo">
+<p id="p_logo">
+<img src="__img__/logo_new2.png">
+</p>
+<p id="p_gg">
+你的每一次共享，都在为地球减负
+</p>
+</div>
+<p id="p_city">&nbsp;
+<a href="#">深圳</a>｜<a href="#">广州</a>｜<a href="#">北京</a>｜<a href="#">上海</a> <a id="li_warm" href="#">更多</a>
+</p>
+{literal}
+<script>
+  var warm=document.getElementById('li_warm');
+  warm.onclick=function(){
+    alert('寻求合作！');
+  }
+</script>
+{/literal}
+</div>
+</div>
+<!-- nav -->
+<div id="div_nav">
+<ul id="ul_nav">
+<li id="li_top" style="font-size: 18px;">首<span class='space_pad'></span>页</li>
+<li class="li_nav"><a href="/jj.html">家<span class='space_pad'></span>具</a></li>
+<li class="li_nav"><a href="/jd.html">家<span class='space_pad'></span>电</a></li>
+<li class="li_nav"><a href="/yw.html">衣<span class='space_pad'></span>物</a></li>
+<li class="li_nav"><a href="/sp.html">私<span class='space_pad'></span>品</a></li>
+<li class="li_nav"><a href="/sj.html">书<span class='space_pad'></span>刊</a></li>
+<li class="li_nav"><a href="/cw.html">宠<span class='space_pad'></span>物</a></li>
+</ul>
+</div>
+{literal}
+<!-- loading 10% -->
+<script>
+    $('.pic').animate({width:'10%'},100);
+</script>
+{/literal}
+
+
+<div style="clear:both;width: 1000px;height:150px;margin: 15px auto;">
+<a href="/miniguide.html">
+<img style="border:0px;width:100%;height: 100%;"src="__img__/wxminiprome.jpg" alt="" />
+</a>
+</div>
+
+
+
+
+<div id="div_search">
+<p id="p_sc">
+       <marquee direction="left" scrollamount="2" scrolldelay="80" onmouseover="stop()" onmouseout="start()">
+		<span>最新消息:</span>
+{foreach name='res_newpro' item='data_newpro'}
+    {$data_newpro.username}发布了{$data_newpro.pro_type}
+    {if condition="$data_newpro.pro_type eq '书刊'"}
+         <<{$data_newpro.pro_name}>>
+    {else /}
+         [{$data_newpro.pro_name}]
+    {/if}
+    &nbsp;&nbsp;&nbsp;
+{/foreach}
+        </marquee>    
+</p>
+  <form id="form1" name="form1" method="post" action="/searchpro.html" target="_blank">
+    <input onfocus="this.placeholder=''" onblur="this.placeholder='搜你想搜的东西'" placeholder="搜你想搜的东西" type="text" name="keywords" id="keywords" />
+    <input type="submit" name="button" id="button" value="寻&nbsp;宝" />
+  </form>
+</div>
+{literal}
+<!-- loading 20% -->
+<script>
+    $('.pic').animate({width:'20%'},100);
+</script>
+{/literal}
+<!-- <div id="div_story" style="font:14px '宋体';">
+<p id="p_fxlb"><span id="span_lbmc">分享达人</span><span class="span_gengduo"><a href="javascript:void(0)">更多</a></span></p>
+{volist name='res_user' id='data_user' offset='0' length='3' empty='没有数据'}
+
+<table border="0" cellpadding="10" cellspacing="8" >
+  <tr>
+    <td colspan="2" align="center"><img style="border-radius:50%;box-shadow: 1px 1px 2px gray;" src="{$data_user.photo}" alt="" width="150px" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>{$data_user.username}</b></td>
+  </tr>
+  <tr align="center">
+    <td colspan="2" align="center"><img width="50px" src="__img__/rose.png" alt="" /></td>
+  </tr>
+  <tr>
+    <th valign="top" align="right" width="60px">标签</th>
+    <td align="left" valign="top">{$data_user.usermark|cut_str=28}</td>
+  </tr>
+  <tr>
+    <th align="right">姓别</th>
+    <td align="left">{$data_user.sex}</td>
+  </tr>
+  <tr>
+    <th align="right">地址</th>
+    <td align="left">{$data_user.address}</td>
+  </tr>
+  <tr>
+    <th align="right">Q<span style="padding:0px 6px;"></span>Q</th>
+    <td align="left">{$data_user.qq}</td>
+  </tr>
+  <tr>
+    <th align="right">兴趣</th>
+    <td align="left">{$data_user.inter}</td>
+  </tr>
+
+</table>
+
+{/volist}
+</div> -->
+
+
+<!-- 流程 -->
+
+<div id="div_flow">
+<a href="javascript:void(0);"><img src="__img__/flow/11.jpg" alt="" /></a>
+<a href="javascript:void(0);"><img src="__img__/flow/22.jpg" alt="" /></a>
+<a href="javascript:void(0);"><img src="__img__/flow/33.jpg" alt="" /></a>
+<a href="javascript:void(0);"><img src="__img__/flow/44.jpg" alt="" /></a>
+<a href="javascript:void(0);"><img src="__img__/flow/55.jpg" alt="" /></a>
+</div>
+{literal}
+<!-- loading 40% -->
+<script>
+    $('.pic').animate({width:'40%'},100);
+</script>
+{/literal}
+<!-- 产品 -->
+<div id="div_pro_all">
+<p class="p_lb"><span class="span_lbmc">家具</span><span class="span_gengduo"><a href="/jj.html">更多</a></span></p>
+<ul id="ul_jj" class="ul_lb">
+{volist name='res_jj' id='data_jj' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro"> 
+    <img class="pro_img" src="__img__/pro/{$data_jj.pro_pic}" />
+    <p class="p_name">{$data_jj.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_jj.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_jj.degree}</p>
+    <p class="p_number">数量：{$data_jj.number}</p>
+    </li>
+{/volist}
+</ul>
+<p class="p_lb"><span class="span_lbmc">家电</span><span class="span_gengduo"><a href="/jd.html">更多</a></span></p>
+<ul id="ul_jd" class="ul_lb">
+{volist name='res_jd' id='data_jd' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro"> 
+    <img class="pro_img" src="__img__/pro/{$data_jd.pro_pic}" />
+    <p class="p_name">{$data_jd.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_jd.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_jd.degree}</p>
+    <p class="p_number">数量：{$data_jd.number}</p>
+    </li>
+{/volist}
+</ul>
+<p class="p_lb"><span class="span_lbmc">衣物</span><span class="span_gengduo"><a href="/yw.html">更多</a></span></p>
+<ul id="ul_yw" class="ul_lb">
+{volist name='res_yw' id='data_yw' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro"> 
+    <img class="pro_img" src="__img__/pro/{$data_yw.pro_pic}" />
+    <p class="p_name">{$data_yw.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_yw.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_yw.degree}</p>
+    <p class="p_number">数量：{$data_yw.number}</p>
+    </li>
+{/volist}
+</ul>
+
+<p class="p_lb"><span class="span_lbmc">私品</span><span class="span_gengduo"><a href="/sp.html">更多</a></span></p>
+<ul id="ul_sp" class="ul_lb">
+{volist name='res_sp' id='data_sp' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro">
+    <img class="pro_img" src="__img__/pro/{$data_sp.pro_pic}" />
+    <p class="p_name">{$data_sp.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_sp.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_sp.degree}</p>
+    <p class="p_number">数量：{$data_sp.number}</p>
+    </li>
+{/volist}
+</ul>
+
+<p class="p_lb"><span class="span_lbmc">书刊</span><span class="span_gengduo"><a href="/sj.html">更多</a></span></p>
+<ul id="ul_sk" class="ul_lb">
+{volist name='res_sj' id='data_sj' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro"> 
+    <img class="pro_img" src="__img__/pro/{$data_sj.pro_pic}" />
+    <p class="p_name">{$data_sj.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_sj.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_sj.degree}</p>
+    <p class="p_number">数量：{$data_sj.number}</p>
+    </li>
+{/volist}
+</ul>
+<p class="p_lb"><span class="span_lbmc">宠物</span><span class="span_gengduo"><a href="/cw.html">更多</a></span></p>
+<ul id="ul_cw" class="ul_lb">
+{volist name='res_cw' id='data_cw' offset='0' length='3' empty='没有数据'}
+    <li class="li_pro"> 
+    <img class="pro_img" src="__img__/pro/{$data_cw.pro_pic}" />
+    <p class="p_name">{$data_cw.pro_name}</p>
+    <!-- <p class="p_con">&yen;{$data_cw.pro_price}</p> -->
+    <p class="p_con"></p>
+    <p class="p_degree">使用时间：{$data_cw.degree}</p>
+    <p class="p_number">数量：{$data_cw.number}</p>
+    </li>
+{/volist}
+</ul>
+</div>
+{literal}
+<!-- loading 80% -->
+<script>
+    $('.pic').animate({width:'80%'},100);
+</script>
+{/literal}
+<!-- 尾部 -->
+<div id="div_bot" style="position: relative;">
+<!-- <p id='qr' style="width:150px;height: 150px;position:absolute; right: 100px;bottom:45px;text-align: center;font:16px 'Microsoft Yahei';color:white;"><img src="__img__/qr.png" alt="" width="100%" height="100%" style="opacity:0.7;" />扫描二维码进入网站</p> -->
+<h3 style="background:lavender;padding:15px 0px 10px 15px;">
+<a href="/about.html" style="color:rgb(153,102,0);" onmouseover="this.style.color='red';" onmouseout="this.style.color='rgb(153,102,0)';">关于本站</a> <font style="color:rgb(153,102,0);">｜</font>
+<a id="ly" href="/leavemessage.html" style="color:rgb(153,102,0);" onmouseover="this.style.color='red';" onmouseout="this.style.color='rgb(153,102,0)';">留&nbsp;言</a>
+<span id="span_hits">
+<font>你</font><font>是</font><font>本</font><font>站</font><font>第</font><font>{$indexhits|default='0'}</font><font>位</font><font>访</font><font style='border-right:1px solid white;'>客</font>&nbsp;&nbsp;&nbsp;
+</span>
+</h3>
+<ul id="ulink">
+    <li><h3>友情链接:</h3></li>
+    <li class="ulj"><a style="color:black;" href="https://www.freecycle.org/" onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">Freecycle(全球捐赠网)</a></li>
+</ul>
+
+<h4>个人旧物私物馈赠分享平台</h4>
+<p><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2556136041&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:379215781:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></p>
+<p>Copyright © <span id="bq"></span> www.51mfgs.com  版权所有 粤ICP备18045267号-1</p>
+{literal}
+<script>
+  var d = new Date();
+  var x = document.getElementById("bq");
+  x.innerHTML=d.getFullYear();
+</script>
+{/literal}
+</div>
+
+{literal}
+<!-- loading 100% -->
+<script>
+    $('.pic').animate({width:'100%'},100,function(){
+      $('.loading').fadeOut();
+    });
+</script>
+{/literal}
+</body>
+</htm>

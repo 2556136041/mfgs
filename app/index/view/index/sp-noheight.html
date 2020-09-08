@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>私品</title>
+<!-- <link rel="stylesheet" type="text/css"  href="__frontcss__/pro_center1.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="__frontcss__/page.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="__frontcss__/commonstyle.css" /> -->
+<style type="text/css">
+
+ul{
+	width: 1100px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+
+
+}
+ul li{
+	float: left;
+	width: 334px;
+	list-style: none;
+	margin: 16px;
+
+
+
+}
+ul li div{
+	width: 334px;	
+	margin-bottom: 15px;				
+	padding: 10px;				
+	box-sizing: border-box;				
+	border-radius: 5px;				
+	box-shadow: 2px 2px 10px #919B9C;
+
+
+}
+ul li img{
+	width: 100%;
+	/*margin-bottom: 10px;*/
+}
+ul li p{
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	text-align: left;
+	height: 30px;
+	line-height: 30px;
+	margin: 0px;
+
+}
+
+/*loading*/
+
+.loading{
+	    width: 100%;
+        height: 100%;
+        position:fixed;
+        top:0;
+        left: 0;
+        z-index: 100;
+        background: white;
+}
+.pic{width:80px;
+         height:80px;
+         background-image:url(__img__/pro/load.gif);
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         margin:auto;
+}
+
+/*回到顶部*/
+
+#btn{
+	display: none;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	/*left:50%;
+	margin-left: 520px;*/
+	right:5%;
+	bottom:300px;
+	background:url(__img__/turntop.png) no-repeat left top;
+}
+#btn:hover{
+	background:url(__img__/turntop.png) no-repeat left -80px;
+}
+
+{/literal}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+{literal}
+<script>
+
+
+
+
+</script>
+{/literal}
+</head>
+
+<body>
+<div style="clear: both;">
+{include file='common/top'}
+</div>
+<div id="div_lead" style="clear:both;text-align:left;background: rgb(204,255,204);height:50px;line-height:50px;width:1100px;margin:20px auto 10px;border-radius: 8px;">
+&nbsp;<img style="vertical-align: middle;" height="25px" src="__img__/currentpos.png">&nbsp;<span style="vertical-align: middle;">当前位置：<a href="/index/Index/index">首页</a> >> 私品</span>
+</div>
+<!-- <div id="div_show"> -->
+
+
+<ul id="ul1">
+	<li></li>
+	<li></li>
+	<li></li>	
+</ul>
+
+
+<!-- </div> -->
+
+<div style="clear:both;">
+{include file='common/bottom'}
+</div>
+<a href="javascript:void(0);" id="btn" title="回到顶部"></a>
+
+{literal}
+<script>
+
+// 下拉加载
+var allProductData = [] //全部的数据
+var productData = [] //要渲染的数据
+var listQuery = {
+	currPage: 1,
+	pageSize: 10
+}
+
+var page=0;
+
+// 回到顶部
+var obtn=document.getElementById('btn');
+var clientHeight=document.documentElement.clientHeight;
+var timer=null;
+var isTop=true;
+
+
+//获取界面节点
+var ul = $('#ul1');
+var li = $('li');
+var liLen = li.length;    
+
+function queryData(){
+    //数据处理 
+    productData = allProductData.slice((listQuery.currPage-1) * listQuery.pageSize, listQuery.currPage * listQuery.pageSize);
+
+    console.log(productData.length);
+    for(i=0;i<productData.length;i++){
+    	var index = getShort(li);//查找最短的li,适合高度不一致的图片排列
+        var pronum= productData[i].number-(productData[i].number-productData[i].remainnum);  //计算当前产品的库存
+		//创建新的节点：div>img+p
+		var div = $('<div>');
+		var a = $('<a>');
+		if(pronum == 0){
+			$(a).attr('href','javascript:void(0)').appendTo($(div));
+		}else{
+            $(a).attr('href','/proshow/id/'+productData[i].pro_id+'.html').appendTo($(div));
+		}
+		
+		var img = $('<img>');
+		$(img).attr('src',"__img__/pro/"+productData[i].pro_pic);//img获取图片地址
+		$(img).attr("alt","我在努力加载...");
+		if(pronum == 0){
+			$(img).css({'opacity':'0.7'});
+		}else{
+            $(img).css({'opacity':'1'});
+		}
+		//根据宽高比计算img的高，为了防止未加载时高度太低影响最短Li的判断
+		// $(img).css('height',(data[i].height+60) * (334 / data[i].width+20) + "px");
+		$(img).appendTo($(a));
+		var p = $('<p>');
+		$(p).text(productData[i].pro_name);//获取产品标题
+		$(p).css({"position":"relative"}).appendTo($(div));
+        // 创建span元素，用来放置产品描述及数量
+		var span = $('<span>');
+		
+		$(span).html("还剩<font style='color:red;'>" + pronum + "</font>个/件");
+		$(span).css({"position":"absolute","right":"5px","top":"0px"}).appendTo($(p));
+		//加入到最短的li中,适合高度不一样的图片排列
+		$(div).appendTo(li[index]);
+
+		//$(div).appendTo(li);
+		$(li).appendTo($(ul));
+	}
+    // 小于总页数，当前页就不加1了
+    if(listQuery.currPage < page+1){
+         listQuery.currPage++;         
+  	}    
+}
+
+// 下拉下载数据，用ajax获得所有数据
+function getAllData(){
+    
+	$(document).ready(function(){
+		$.ajax({url:"/ajaxSpData",async:true,success:function(result){
+                allProductData = JSON.parse(result);
+                console.log(allProductData.length);
+                page=Math.ceil(allProductData.length / listQuery.pageSize);
+                // console.log(page);
+                queryData();
+            }
+        });
+	});
+}	
+
+
+//打开网页预加载数据后加载图标隐藏
+document.onreadystatechange=function(){
+	  var loading='<div class="loading"><div class="pic"></div></div>';
+	  $('body').append(loading);
+	  if(document.readyState=='complete'){
+	  	  $('.loading').fadeOut();
+	  };
+}
+
+
+window.onload = function() {
+	getAllData();
+	
+	window.onscroll = function (){
+
+		//适用于等高的图片排列
+  //       var offsetHeight=document.body.offsetHeight;
+		// var offsetTop=document.body.offsetTop;
+		// var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+		
+		// if(offsetHeight+offsetTop<scrollTop+document.documentElement.clientHeight){
+		// 	if(listQuery.currPage < page+1){		   	
+		//     	queryData();
+		//     }  
+
+		// }
+
+        // 下拉加载，适应高度不一致的图片排列
+		var index = getShort(li);
+		var minLi = li[index];
+		var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+		
+		if(minLi.offsetHeight+minLi.offsetTop<scrollTop+document.documentElement.clientHeight){
+			if(listQuery.currPage < page+1){		   	
+		    	queryData();
+		    }  
+		}
+
+        //回到顶部
+        var ostop=document.documentElement.scrollTop || document.body.scrollTop;
+		if(ostop>=clientHeight){
+            obtn.style.display='block';
+		}else{
+			obtn.style.display='none';
+		}
+		if(!isTop){
+			clearInterval(timer);
+		}
+		isTop=false;
+
+		obtn.onclick=function(){
+	    	// alert(clientHeight);
+	    	timer=setInterval(function(){
+                var ostop=document.documentElement.scrollTop || document.body.scrollTop;
+                var ispeed=Math.floor(-ostop / 10);
+	    	    document.documentElement.scrollTop = document.body.scrollTop =ostop+ispeed;
+	    	    isTop=true;
+	    	    if(ostop==0){
+	    	    	clearInterval(timer);
+	    	    }
+	    	},30);
+	    	
+	    }
+/*******************************   回到顶部 *******************************/ 
+
+    }
+
+	 
+}
+
+//获得最短图片的索引
+function getShort(li) {
+	var index = 0;
+	var liHeight = li[index].offsetHeight;
+	for(var i = 0; i < li.length; i++) {
+		if(li[i].offsetHeight < liHeight) {
+			index = i;
+			liHeight = li[i].offsetHeight;
+		}
+	}
+	return index;
+}
+
+</script>
+{/literal}
+
+</body>
+</html>

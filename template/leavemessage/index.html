@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>留言首页</title>
+<link rel="stylesheet" type="text/css"  href="__leavewordcss__/index.css" />
+<link rel="stylesheet" href="__frontcss__/page.css" type="text/css" media="screen" />
+<style>
+
+</style>
+</head>
+<body>
+{include file="./template/leavemessage/top.html" /}
+
+<p id="p_pos" style="background: rgb(220,220,220,0.4);">
+今天是:{$now|date='Y-m-d',###}&nbsp;&nbsp;您当前的位置：查看留言
+</p>
+<div id="div_main">
+<div id="div_left">
+{/*left*/}
+
+<table width="300" height="100" border="0" align="center" cellpadding="0" cellspacing="10">
+    <tr>
+         <th colspan="2" align="center">用户登录</th>
+    </tr>
+{literal}
+ <script src="/public/static/js/jquery/jquery3.0.js"></script>
+<script language="javascript">
+//点击登陆
+function login_ajax(){
+    var username=$('#username').val();
+    var pwd=$('#pwd').val();
+    $.get("/login_ok.html",
+        {"username":username,"pwd":pwd},function(data){
+        if(data==0){
+             setTimeout(function(){
+                   $('#tjbut').css("background-color","red").css('color','white').val('登陆...');
+                   window.location="/leavemessage.html"; 
+             },1000);             
+        }else{
+            alert('失败！');
+        }
+    });
+}
+
+//按回车键登陆
+$("body").keydown(function() {
+    if (event.keyCode == "13") {//keyCode=13是回车键
+        var username=$('#username').val();
+        var pwd=$('#pwd').val();
+        $.get("/login_ok.html",
+            {"username":username,"pwd":pwd},function(data){
+            if(data==0){
+                 setTimeout(function(){
+                      $('#tjbut').css("background-color","red").css('color','white').val('登陆...');
+                      window.location="/leavemessage.html"; 
+                 },1000);                 
+            }else{
+                alert('失败！');
+            }
+        });        
+    }
+}); 
+// function chkinputlogin(form){
+//  if(form.usernc.value==""){
+//  alert("请输入用户昵称！");
+//  form.usernc.focus();
+//  return(false);
+// }
+
+// if(form.userpwd.value==""){
+//  alert("请输入登录密码！");
+//  form.userpwd.focus();
+//  return(false);
+// }
+// return(true);
+
+// }
+</script>
+{/literal}
+
+<tr>
+    <th class="td_ts">用户名：</th>
+    <td><input class="input_con" type="text" size="16" class="inputcss" id="username" name="username" value="{$Think.session.unc|default=''}"></td>
+</tr>
+<tr>
+    <th class="td_ts">密&nbsp;&nbsp;码：</th>
+    <td><input class="input_con" type="password" size="16" class="inputcss" id="pwd" name="pwd" value="{$pwd|default=''}"></td>
+</tr>
+<tr>
+    <td colspan="2" align="center">
+        <input id="tjbut" class="input_button" type="button" value="登录" onclick="login_ajax()">&nbsp;&nbsp;
+        <input class="input_button" type="reset" value="重置" >
+    </td>
+</tr>
+{if condition='$Think.cookie.unc eq null'}
+<tr>
+    <td colspan="2" align="left">
+       其他登陆方式:&nbsp;<a href="/qqlogin.html"><img valign="middle" border="0" src="__img__/QQ.jpg" width="30px"></a>
+    </td>
+</tr>
+{/if}
+</form>
+</table>
+<!-- <p id="p_fg"></p>
+<table width="300" border="0" align="center" cellpadding="0" cellspacing="10" >
+<tr>
+    <th colspan="2" align="center">最新留言</th>
+</tr>
+
+
+{volist name='data' id='val' offset='0' length='10' empty='暂无留言'}
+ <tr>
+     <td width="15" align="right"><img src="__img__/mes/mark_0.gif" width="10" height="10" /></td>
+     <td> <a href="/lookleaveword/id/{$val.id}.html" class="a1" style="color:black;" onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">{$val.title|cut_str=8}</a> <font color=blue>{$val.createtime|substr=2,8}</font></td>
+</tr>
+{/volist}
+
+
+</table> -->
+
+</div>
+<div id="div_right">
+<table id="tab_main" width="680" border="0" align="center" cellpadding="0" cellspacing="10">
+<tr>
+<td  colspan="2" align="left">
+共有{$total}条留言
+</td>
+</tr>
+ 
+{if condition='!empty($list)'}
+{foreach name='list' item='mesval'}
+<tr>
+    <td colspan="2" align="left">
+    &nbsp;主&nbsp;&nbsp;题：{$mesval.title}
+    </td>
+</tr>
+<tr>
+    <td style="height: 25px;padding:5px 10px;background:rgba(200,200,200,0.2);" colspan="2" align="right">
+        {$mesval.createtime}
+	 
+    </td>
+</tr>
+<tr>
+    <td width="100" align="center">
+        <img width="80%" src="{$mesval.personinfo.photo|default=''}" alt="" />
+        <br>
+        <p style="text-align: center;">
+               {$mesval.personinfo.username|default=''}
+		</p>
+    </td>
+    <td width="580" valign="top">留言：{$mesval.content}</td>
+</tr>
+{/foreach}
+{else/}
+还没有留言
+{/if}  
+{if condition="$total gt 10"}
+<tr>
+	<td colspan="2"><hr /></td>
+</tr>
+{/if}
+<tr>
+    <td colspan="2" align="center">
+    {$list->render()}
+          
+
+    </td>
+</tr>
+</table>
+</div>
+</div>
+{include file="./template/leavemessage/bottom.html" /}	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:28:"./template/dsk/dskindex.html";i:1555508545;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大水坑社区便民服务</title>
+    <link rel="stylesheet" type="text/css" href="__frontcss__/dskindex.css">
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="box" id="box1">
+           <a href="http://t.cn/E6OsQIT">
+           <div class="content">
+			   <p>
+			      <img class="img" src="__img__/dsk/icon_school.png" />
+	              <span class="tit">入学入园计生信息</span>
+			   </p>
+		   
+		   </div>
+		   </a>
+		</div>
+        <div class="box" id="box2">
+            <a href="http://szsi.sz.gov.cn/">
+            <div class="content">
+		    <p>
+		      <img class="img" src="__img__/dsk/icon_social.png" />
+              <span class="tit">社保查询</span>
+		    </p>
+		    </div>
+		    </a>
+		</div>
+        <div class="box" id="box3">
+           <a href="http://gjj.sz.gov.cn/">
+           <div class="content">
+			    <p>
+			       <img class="img" src="__img__/dsk/icon_fund.png" />
+	                <span class="tit">公积金查询</span>
+			    </p>
+		   </div>
+		   </a>
+		</div>
+        <div class="box" id="box4">
+           <a href="https://gzh.szjj.sz.gov.cn/h5/#/newqueryLawless?type=nologin&_t=1554267462000&openId=oPyqQjmwARiPJE50rMdfmae0dbXw&unionid=og99L04NFEIIVJvyqXo-CWYAG8P4&headimgurl=http://thirdwx.qlogo.cn/mmopen/vi_32/icCJyLwOsz4gPQb2oBfDoicJ7O6iavnyWBFBDRslVNmlYqp1P4Kia2xqbD7iaXborE8yic6AUxEyCfTm3ribNODB9ia7xQ/132&nickname=wxl
+">
+           <div class="content">
+		   <p>
+		       <img class="img" src="__img__/dsk/icon_illegal.png" />
+               <span class="tit">违章查询</span>
+           </p>
+		   </div>
+		   </a>
+		</div>
+        <div class="box" id="box5">
+            <a href="http://wx.sz.bendibao.com/weixin/csfw/?controller=home.Index&action=banshi&bid=307&t=1554267543">
+            <div class="content">
+		       <p>
+		          <img class="img" src="__img__/dsk/icon_housing.png" />
+                   <span class="tit">保障性住房申请</span>
+		    </p>
+           </div>
+		   </a>
+		</div>
+        <div class="box" id="box6">
+           <a href="http://apps.szlhq.gov.cn/lhxinqu/zdfwgb/zzjzfw52/index.html">
+           <div class="content">
+		     <p>
+		        <img class="img" src="__img__/dsk/icon_help.png" />
+                <span class="tit">资助救助服务</span>
+		   </p>
+		   </div>
+		   </a>
+		</div>
+        <div class="box" id="box7">
+           <a href="http://apps.szlhq.gov.cn/lhxinqu/zdfwgb/jhsyfwzbl69/index.html">
+           <div class="content">
+		      <p>
+		        <img class="img" src="__img__/dsk/icon_fertility.png" />
+                <span class="tit">计划生育</span>
+		      </p>
+		   </div>
+		   </a>
+		</div>
+        <div class="box" id="box8">
+           <a href="https://www.gdzwfw.gov.cn/portal/search/guide?region=440000&keyword=%E5%A4%B1%E4%B8%9A&areaCode=440309&departmentCode=&type=all&onlyCorrespondingLevel=false&onlyOnlineable=false&force=false">
+           <div class="content">
+		      <p>
+		          <img class="img" src="__img__/dsk/icon_unemployment.png" />
+                   <span class="tit">失业登记</span>
+		       </p>
+		   </div>
+		   </a>
+		</div>	
+		<!--
+        <div class="box" id="box9" style="background:#FFE4C4;">
+            <a href="#">
+            <div class="content">
+		       <p>
+		           <img class="img" src="__img__/dsk/icon_work.png" onclick="document.getElementById('box9').style.background='#FFF8DC';" />
+		           <span class="tit">办事指南</span>
+		       </p>
+		    </div>
+		    </a>
+		</div>
+		-->
+	</div>	
+
+
+    <div style="text-align: center;margin-bottom: 30px;font-size: 25px;">
+    	版权所有@大水坑社区工作站
+    </div>
+
+</body>
+
+</html>

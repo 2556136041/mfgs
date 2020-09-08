@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心</title>
+<link rel="stylesheet" href="__myspacecss__" />
+<style>
+
+</style>
+</head>
+<body>
+<div id="ps_top" style="background: {$color|default='lavender'}">
+  <h1>my space</h1>
+  <h4>【<a href="/myspace.html">个人中心</a>】</h4>
+  <p id="cut1"></p>
+  <p id="p_l" style="font-size:20px;"><a href="/index.html">首页</a></p>
+	<p id="p_m">{$time|date='Y-m-d',###}</p>
+  <p id="p_r"><a href="/logout.html">安全退出</a></p>
+	<p id="hidden"></p>
+</div>
+<div id="ps_main">
+    <div id="ps_left" style="width:26%;">
+        <table id="tab1" align="center" width="90%" border="0" cellpadding="5" cellspacing="10">
+          <tr>
+            <td style="text-align: center;">
+                 <img style="border-radius: 50%;" width="120px" src="{$userinfo.photo}" alt="" />
+            </td>
+          </tr>
+
+          <tr>
+              <td align="center"><font color="#FF0000">{$userinfo.username}</font></td> 
+
+          </tr>
+
+          <tr>
+              <th align="left">邮箱:</th>    
+          </tr>
+
+          <tr>
+              <td align="left">{$userinfo.email}</td>
+          </tr>
+
+          <tr>
+             <th align="left">Q&nbsp;Q:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.qq}</td>
+          </tr>
+
+          <tr>
+             <th align="left">电话:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.tel}</td>
+          </tr>
+
+          <tr>
+             <th align="left">地址:</th>    
+          </tr>
+
+          <tr>
+             <td align="left">{$userinfo.address}</td>
+          </tr>
+
+          <tr>
+              <th align="left">标签:</th>    
+          </tr>
+
+          <tr>
+              <td align="left">{$userinfo.usermark}</td>
+          </tr>
+
+          <tr>
+              <th align="left">兴趣:</th>    
+          </tr>  
+
+          <tr>
+              <td align="left">{$userinfo.inter}</td>
+          </tr>
+        </table>
+        <table id='tab2' width="90%" cellspacing="10px" cellpadding="5px" border="0" align='center'>
+          <tr>
+            <th align="right" id="th_fx">分享：</th>
+            <td><a href="/pubpro">发布</a></td>
+          </tr>
+          <tr align="left">
+            <td></td>
+            <td><a href="/mymodify/id/{$userinfo.id}.html">修改</a></td>
+          </tr>
+        </table>
+
+    </div>
+    <div id="ps_right" style="width:72%;">
+{include file="./template/myspace/write.html" /} 
+
+    </div>
+</div>
+
+{include file="./template/myspace/bottom.html" /}	
+
+
+</body>
+</html>

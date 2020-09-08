@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>留言首页</title>
+<link rel="stylesheet" type="text/css"  href="__leavewordcss__/index.css" />
+<link rel="stylesheet" href="__frontcss__/page.css" type="text/css" media="screen" />
+ <script src="/public/static/js/jquery/jquery3.0.js"></script>
+<style>
+input[type=submit],input[type=reset]{
+    padding:2px 6px;
+}
+</style>
+</head>
+<body>
+{include file="./template/leavemessage/top.html" /}
+<p id="p_pos">
+今天是:{$now|date='Y-m-d',###}&nbsp;&nbsp;您当前的位置：发表留言
+</p>
+<div id="div_main">
+<div id="div_left">
+{/*left*/}
+
+<table width="300" height="100" border="0" align="center" cellpadding="0" cellspacing="10">
+    <tr>
+         <th colspan="2" align="center">用户登录</th>
+    </tr>
+{literal}
+<script language="javascript">
+$(document).ready(function(){
+      $('#title').focus();
+
+});
+
+</script>
+{/literal}
+<tr>
+    <th class="td_ts">用户名：</th>
+    <td><input class="input_con" type="text" size="16" class="inputcss" id="username" name="username" value="{$Think.session.unc|default=''}"></td>
+</tr>
+<tr>
+    <th class="td_ts">密&nbsp;&nbsp;码：</th>
+    <td><input class="input_con" type="password" size="16" class="inputcss" id="pwd" name="pwd" value="{$pwd|default=''}"></td>
+</tr>
+<tr>
+    <td colspan="2" align="center">
+        <input id="tjbut" class="input_button" type="button" value="登录" onclick="login_ajax()">&nbsp;&nbsp;
+        <input class="input_button" type="reset" value="重置" >
+    </td>
+</tr>
+{if condition='$Think.cookie.unc eq null'}
+<tr>
+    <td colspan="2" align="left">
+       其他登陆方式:&nbsp;<a href="/qqlogin.html"><img valign="middle" border="0" src="__img__/QQ.jpg" width="30px"></a>
+    </td>
+</tr>
+{/if}
+</form>
+</table>
+<p id="p_fg"></p>
+<table width="300" border="0" align="center" cellpadding="0" cellspacing="10" >
+<tr>
+    <th colspan="2" align="center">最新留言</th>
+</tr>
+
+
+{volist name='data' id='val' offset='0' length='10' empty='暂无留言'}
+ <tr>
+     <td width="15" align="right"><img src="__img__/mes/mark_0.gif" width="10" height="10" /></td>
+     <td> <a href="/lookleaveword/id/{$val.id}.html" class="a1" style="color:black;" onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">{$val.title|cut_str=8}</a> <font color=blue>{$val.createtime|substr=2,8}</font></td>
+</tr>
+{/volist}
+
+
+</table>
+
+</div>
+<div id="div_right">
+<table id="tab_main" width="680" border="0" align="center" cellpadding="0" cellspacing="10">
+<form name="form1" method="post" action="/savemes.html">
+<tr>
+    <td colspan="2" bgcolor="lavender">&nbsp;&nbsp;发表留言</td>
+</tr>
+{literal}
+<script language="javascript">
+function chkinput(form){
+    if(form.title.value==""){
+      alert("请输入留言主题！");
+      form.title.focus();
+      return(false);
+    }
+
+    if(form.content.value==""){
+       alert("请输入留言内容！");
+       form.content.focus();
+    return(false);
+    }
+
+return(true);
+}
+
+</script>
+{/literal}
+<tr>
+   <td width="100px" align="top">留言主题：</td>
+   <td width="580px" align="top">&nbsp;<input type="text" id="title" name="title" size="30" style="width:98%;height: 40px;" class="inputcss"></td>
+</tr>
+<tr>
+    <td valign="top" align="right">留言内容：</td>
+    <td valign="top">&nbsp;<textarea name="content" id="content" style="font-size:16px;width:98%;" rows="10" class="inputcss"></textarea><p id='result'></p></td>
+</tr>
+<tr>
+    <td colspan="2" align="center"><input id='tjbut' type="submit"  name="submit" value="发表" class="buttoncss"onclick="return chkinput(form1);">&nbsp;&nbsp;&nbsp;<input type="reset" name="reset" value="重写" class="buttoncss"></td>
+</tr>
+</form>
+</table>
+</div>
+</div>
+{literal}
+<script>
+     $("body").keydown(function() {
+          if (event.keyCode == "13") {//keyCode=13是回车键
+              $('#tjbut').click().css('background-color','red');
+          }
+    });  
+
+$(document).ready(function(){
+
+   $("#content").keyup(function(){
+         var length = 100;
+         var content_len = $("#content").val().length;
+         var in_len = length-content_len;
+        
+         // 当用户输入的字数大于制定的数时，让提交按钮失效
+         // 小于制定的字数，就可以提交
+         if(in_len >=0){
+            $("#result").html('您还可以输入'+in_len+'字');
+            $("#tjbut").attr("disabled",false);
+            // 可以继续执行其他操作
+         }else{
+            $("#result").html('您还可以输入'+in_len+'字');
+            $("#tjbut").attr("disabled",true);
+            return false;
+         }
+        
+    });
+   });
+
+</script>
+{/literal}
+{include file="./template/leavemessage/bottom.html" /}  
+</body>
+</html>

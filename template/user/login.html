@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆</title>
+<style type="text/css">
+ {literal}
+    a{text-decoration: none;}
+    a:hover{color:red;}
+	div#div_main{
+		width:600px;
+		margin:30px auto;
+		border:1px solid black;
+	}
+	table{width:600px;
+	      }
+	th{text-align: right;}
+	td{text-align: left;}
+	
+	input[type="submit"],input[type="reset"]{
+         margin-right:15px;
+		 height:35px;
+		 width:60px;		 
+		 font-size:16px;
+
+	}
+	input.inp1
+	{
+		height:35px;
+		font-size:16px;
+		border:1px solid black;
+	}
+	h1{width: 600px;margin: 10px auto;margin-bottom:15px;text-align: center; }
+	.user_icon
+	{
+	   background:url(../images/user_icon.jpg) right center no-repeat;
+	}
+{/literal}
+</style>
+{literal}
+<script>
+	 function checkinput(form){
+			    if(form.user.value==""){
+				  alert("请输入用户名");
+				  form.user.focus();
+				  return(false);
+				}
+			    if(form.pwd.value==""){
+				  alert("请输入密码");
+				  form.pwd.focus();
+				  return(false);
+				}
+				if(form.xym.value==""){
+					alert("验证码不能为空！");
+					form.xym.focus();
+					return(false);
+					
+					}
+						
+				return(true);
+			  }
+			
+			</script>
+{literal}
+</head>
+
+<body>
+{include file='common/top'}
+<div id="div_main">
+<h1>用户登陆</h1>
+<form action="/login_ok" method="post" onsubmit="return checkinput(this);">
+<table border="0" cellpadding="0" cellspacing="15">
+
+	<tr>
+		<th>用户名</th>
+		<td><input type="text" class="inp1 user_icon" name="user" size="40" /></td>
+	</tr>
+	<tr>
+		<th>密码</th>
+		<td><input type="password" class="inp1 user_icon" name="pwd" size="40" /></td>
+	</tr>
+	<tr>
+		<th>验证码</th>
+		<td><input type="text" class="inp1 user_icon" id="xym" name="xym" size="40" /> </td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><img height="35px" src="../lib/verify1.php" id="img11">
+		</td>
+        <script>
+		var img11=document.getElementById("img11");
+		var xym=document.getElementById("xym");
+		img11.onclick=function(){
+			this.src='../lib/verify1.php';
+			xym.focus();
+			xym.value=null;			
+		}
+		</script>
+	</tr>
+    <tr>
+        <th>保存</th>
+		<td>
+			<select name="save" id="save">
+                <option value="">选择</option>
+				<option value="1">一小时</option>
+				<option value="24">一天</option>
+				<option value="30">一个月</option>
+				<option value="90">三个月</option>
+				<option value="365">一年</option>
+			</select>
+            &nbsp;<a href="getbackpwd.php">忘记密码?</a>
+	</tr>
+	<tr>
+	    <td colspan="2" style="text-align:center;">
+	    <input t size="40" type="submit" name="sub" value="提交" />
+        <input type="reset" value="重置" />
+	    </td>
+		
+	</tr>
+</table>
+</form>
+</div>
+{include file='common/bottom'}
+</body>
+</html>

@@ -1,0 +1,723 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:32:"./app/apply/view/index/2020.html";i:1596897902;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>发稿明细</title>
+<style type="text/css">
+    *{padding: 0px;margin: 0px;}
+    a{
+    	color:black;
+    	text-decoration: none;
+    }
+
+
+    .loading{
+		width: 100%;
+	    height: 100%;
+	    position:fixed;
+	    top:0;
+	    left: 0;
+	    z-index: 100;
+	    background: white;
+	}
+	.pic{
+		width:80px;
+	    height:80px;
+	    background-image:url(__img__/pro/load.gif);
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    margin:auto;
+	}
+
+	.container{
+		width: 2600px;
+		height: 100%;
+		overflow: hidden;
+		border: 5px solid rgba(256,256,256,1);
+		margin: 18px auto 0px;
+		position: relative;	
+
+	}			
+	#box{
+		width: 2600px;
+		height: 580px;
+	}
+
+	#div_logo{
+		width:60px;
+		height:60px;
+		position:absolute;
+		top:10px;
+		left:50px; 
+	}
+
+	#div_intoweb{
+		width:60px;
+		height:40px;
+		line-height:40px;
+		position: absolute;
+    	top:80px;
+    	left:55px; 
+    	z-index: 100;	
+	}	
+
+	#div_actionsign{
+		width:60px;
+		height:40px;
+		line-height:40px;
+		position: absolute;
+    	top:120px;
+    	left:55px; 
+    	z-index: 100;
+	}
+
+	#div_pub{
+		width:60px;
+		height:40px;
+		line-height:40px;
+		position: absolute;
+    	top:160px;
+    	left:55px; 
+    	z-index: 100;	
+	}
+
+	#colorful_clock{
+		width:60px;
+		height:40px;
+		line-height:40px;
+		position: absolute;
+		text-align: center;
+    	top:200px;
+    	left:55px; 
+    	z-index: 100;	
+    	font-size:14px;    
+    	font-weight: 800;	
+
+	}
+
+	#colorful_clock a,#colorful_clock a:visited{
+        color:rgb(38,148,247);
+    }
+
+	#div_todaytime{
+		width:80px;
+		position: absolute;
+    	top:474px;
+    	left:55px; 
+    	z-index: 100;
+    	font-size:12px;
+    	color:rgb(255,0,0);
+    	text-align: center;
+    	/*background: lavender;*/
+    	border:2px solid transparent;
+    	border-radius: 8px;
+    	padding:6px 0px;    	
+    	box-sizing:border-box;
+    	animation: circle 2s ease infinite;
+
+	}	
+	
+
+	@keyframes circle{
+         25%{
+            border-top:2px solid #eedd78;
+            border-right:2px solid transparent;
+            border-bottom:2px solid transparent;
+            border-left:2px solid transparent;
+         }
+         50%{
+            border-top:2px solid #eedd78;
+            border-right:2px solid #73b9bc;
+            border-bottom:2px solid transparent;
+            border-left:2px solid transparent;
+         }
+         75%{
+            border-top:2px solid #eedd78;
+            border-right:2px solid #73b9bc;
+            border-bottom:2px solid #dd6b66;
+            border-left:2px solid transparent;
+         }
+         85%{
+            border-top:2px solid #eedd78;
+            border-right:2px solid #73b9bc;
+            border-bottom:2px solid #dd6b66;
+            border-left:2px solid #FF0000;
+         }
+         100%{
+            border:2px solid transparent;
+         }
+    }
+
+    #div_todaytime p{
+		animation: fade 2s ease infinite;
+
+
+	}
+    @keyframes fade{
+         25%{
+              opacity: 1;
+         }
+         50%{
+             opacity: 1;
+         }
+         75%{
+         	 opacity: 0;
+         }
+         85%{
+            opacity: 0;
+         }
+         100%{
+            opacity: 1; 
+         }
+    }
+
+
+	#div_pub a,#div_intoweb a,#div_actionsign a{
+    	text-decoration: none;
+    	font-size:14px; 
+    	cursor: pointer;	
+    	color:black; 	 
+    }	
+	 #div_month{
+    	width:100%;
+    	height:30px;
+    	/*background: gray;*/
+    	position: fixed;
+    	bottom:8px;
+    	left:0px;
+    	text-align: center;
+    	z-index: 90;
+    	box-sizing: border-box;
+    }
+    .qh{
+		width: auto;
+		height: auto;
+		overflow: hidden;				
+		position: absolute;
+		top: 5px;
+		left: 62%;
+		transform: translateX(-50%);
+	}
+	.qh button{
+        width: 110px;
+        height:30px;
+	    line-height: 30px;
+	    font-size: 16px;
+	    border-radius: 8px;
+	    outline: none;
+	    border:none;
+	    cursor: pointer;
+
+	}
+
+	#div_month button{
+	    width: 7%;
+        height:30px;
+        margin-right: 10px;
+	    line-height: 30px;
+	    font-size: 16px;
+	    border-radius: 8px;
+	    outline: none;
+	    border:none;
+	    cursor: pointer;
+    }
+    .qh button:hover,#div_month button:hover{
+    	background:#005eaa;
+    	color:white;
+    }	
+    .active{
+    	background:#005eaa;
+    	color:white;
+    }
+
+    /*手机端提示*/
+    p#ts{
+    	margin-top:40px;
+    	text-align: center;
+    	font-size: 45px;
+    	color:red;
+    	display: none;
+    }	
+    @media only screen and (max-width: 981px){    
+    	.container{
+    		height: 2600px;			
+	        transform: rotate(-90deg);
+	        margin-left: 400px;
+	        margin-bottom:100px;
+	        position: absolute;
+	        left:0px;
+	        top:0px;
+	        font-size: 10vw;
+	    }
+
+	    p#ts{
+	    	display: block;
+
+	    }
+	    #box{
+
+		}
+		#div_logo{
+            display:none;
+
+		}
+	    #div_intoweb,#div_pub,#div_actionsign{
+	    	display:none;
+	    }
+	    .qh{
+            top: -60px;
+	    }
+
+
+	    #div_month{
+	    	position: absolute;
+	    	left:20px;
+	    	top:20px;
+	    	z-index:999;
+
+	    }
+	    #div_month button{
+	    	width: 120px;
+	    	display: block;
+	    	margin-top:16px;
+	    }
+        .qh button,#div_month button{
+            border:1px solid gray;
+            box-shadow: 1px 1px 3px black;
+        }
+
+        /*今日时间*/
+        #div_todaytime{
+        	display: none;
+        }
+
+        #colorful_clock{
+			display: none;
+	   }
+
+	}
+
+	@media (orientation: portrait) {
+		#div_screen{
+			display: none;
+		}	
+	    
+    }
+
+</style>	
+<link rel="stylesheet" href="__frontcss__/animate.min.css" type="text/css"  />	
+<script src="__js__/echartsplugin/echarts.min.js"></script>
+<script src="__js__/jquery-1.5.2.min.js"></script>
+<script src="__js__/publicdatajs/publicnews.js"></script>
+<script src="https://www.runoob.com/static/js/wonderland.js"></script>
+
+</head>
+<body>
+<div class="container"> 
+    <!-- 读特logo -->
+    <div id="div_logo" class="animated flipInY infinite">       
+          <img src="__img__/icon/dute.png" alt="" width="100%" height="100%">      
+    </div>    
+
+    <!-- 链接官网 -->
+    <div id="div_intoweb">
+         <a onmousemove="this.style.color='red'" onmouseout="this.style.color='black'" href="https://www.dutenews.com/" target="_blank">进入官网</a>
+    </div>
+
+    <!-- 动态示意 -->
+    <div id="div_actionsign">
+         <a onmousemove="this.style.color='red'" onmouseout="this.style.color='black'" href="/apply/showmovingdata" target="_blank">动态监测</a>
+         <!-- <a onmousemove="this.style.color='red'" onmouseout="this.style.color='black'" href="javascript:void(0)">动态监测</a> -->
+    </div>
+   
+    <!-- 发布数据 -->
+     <div id="div_pub">
+         <a onmousemove="this.style.color='red'" onmouseout="this.style.color='black'" href="/apply/publicnewsdatalogin" target="_blank">提交数据</a>
+    </div>
+
+
+    <!-- 炫丽时钟 -->
+     <div id="colorful_clock">
+         <a onmousemove="this.style.color='red'" onmouseout="this.style.color='rgb(38,148,247)'" href="/apply/clock1" target="_blank">炫丽时钟</a>
+    </div>
+
+    <!-- 显示今日时间 -->
+    <!--  <div id="div_todaytime">
+         <p style="font-size:16px;color:black;font-weight: 900;">今日</p>
+         <p id="today" style="font-weight: 600;"></p>         
+    </div> -->
+
+   
+	<!--给图表准备一个容器-->
+	<div id="box"></div>
+	
+	<div class="qh">
+		<button id="line">折线图</button>
+		<button id="bar">柱状图</button>
+		<!-- <button id="stack">堆叠图</button> -->
+	</div>
+	<div id="div_month">
+		<button class="btn" id="1" onclick="send(this.id);">1月数据</button>
+		<button class="btn" id="2" onclick="send(this.id)">2月数据</button>
+		<button class="btn" id="3" onclick="send(this.id)">3月数据</button>
+		<button class="btn" id="4" onclick="send(this.id)">4月数据</button>
+		<button class="btn" id="5" onclick="send(this.id)">5月数据</button>
+		<button class="btn" id="6" onclick="send(this.id)">6月数据</button>
+		<button class="btn" id="7" onclick="send(this.id)">7月数据</button>
+		<button class="btn" id="8" onclick="send(this.id)">8月数据</button>
+		<button class="btn" id="9" onclick="send(this.id)">9月数据</button>
+		<button class="btn" id="10" onclick="send(this.id)">10月数据</button>
+		<button class="btn" id="11" onclick="send(this.id)">11月数据</button>
+		<button class="btn" id="12" onclick="send(this.id)">12月数据</button>
+    </div>
+
+    <p id="ts">手机端支持不理想，请用pc端打开</p>
+
+</div>		
+
+
+
+<script type="text/javascript">	
+
+        
+        $(function(){
+
+        	  //显示今日时间
+        	  var today=getTodaytime();
+        	  $("#div_todaytime #today").text(today); 	  
+
+        	  //月份样式重置
+        	  // var winWidth = window.screen.availWidth;
+        	  // console.log(winWidth);
+        	  // $("#div_month").width(winWidth);
+        	  // $("#div_month .btn").width(Math.ceil(winWidth/13)).css({boxSizing:"border-box"});  
+        	   
+        	  var winHeight = window.screen.availHeight;
+        	  if(winHeight>728){
+                   console.log("大于728");
+                   var h=650;
+                   $("#box").height(h);
+        	  }else{
+        	  	   var h1=550;
+                   $("#box").height(h1);
+        	  }
+        	  
+         
+
+
+        })
+
+        //获取当年的年份和月份
+		var date=new Date;
+        var y = date.getFullYear(); //当前年份
+        var month;  
+        if(y!=2020){
+        	y=2020;
+        	month=12;
+        }else{
+        	month=date.getMonth() + 1;  //当前月份
+        }
+        //month=date.getMonth() + 1;  //当前月份
+        var secondMonth=getDaysOf2(y);  //根据当前年份判断二月份的天数
+       
+        // m = m < 10 ? '0' + m : m;  
+        //只显示2020年数据        
+
+	    //自定义样式
+        var style={
+        	//topcolor:"rgba(209,48,43,1)",
+        	topcolor:"rgba(20,20,20,.9)",
+        	topfontsize:13,
+            //柱体三种颜色
+            basecolor:["#eedd78","#73b9bc","#dd6b66"],
+            
+            //平均数标线字体大小
+            averagefontsize:14,
+            //平均数标线颜色
+            averagecolor1:"#eedd78",
+            averagecolor2:"#73b9bc",
+            averagecolor3:"#dd6b66",
+            //平均数标线宽度大小
+            averagewidth:3,
+            //主标名称 
+            //titname:"2020读特·区域频道月度("+month+"月)发稿曲线图",
+            //主标题颜色
+            titcolor:"#005eaa",
+			//主标题字体大小
+			titfontsize:20,
+			//副标题颜色
+			subtitcolor:"rgba(10,10,10,.9)",
+			//副标题字体大小
+			subtitfontsize:15,			
+			//x轴字体颜色
+			xdatacolor:"black",
+			//x轴字体大小
+			xdatafontsize:14,
+			//y轴字体颜色
+			ydatacolor:"black",
+			//y轴字体大小
+			ydatafontsize:14,
+			//xy轴颜色
+			linecolor:"black",
+			//xy轴大小
+			linewidth:3,
+			//xy轴单位字体颜色
+			linetextcolor:"black",
+			//xy轴单位字体大小
+			linetextfontsize:14,
+			//标题位置
+			titposleft:260,
+            titpostop:0,
+            //色块提示
+            tipname1:"记者供稿量",
+            tipname2:"抓取稿件量",
+            tipname3:"日发稿总量"
+
+        }
+
+       
+		//拿到所有的数据
+		var everydays;
+        getData();
+
+        function getData(){   
+		   $(function(){
+		   	    $.ajax({
+					url:"/apply/readData",
+					dataType:'JSON',
+                    type:'post',
+					async:true,
+					success:function(result){
+						 everydays=(JSON.parse(result)).everydaynumbers;
+						 // sixd1=everydays[5].six.d1;
+						 // console.log(sixd1);
+						 // sixd2=everydays[5].six.d2;
+						 // sixd3=everydays[5].six.d3;
+                         // alert(month);
+                         
+                        //根据月份获取对应的数据
+				        switch(month){
+						    case 1:
+						        var d1=everydays[0].one.d1;
+								var d2=everydays[0].one.d2;
+								var d3=everydays[0].one.d3;
+						        break;
+						    case 2:
+						        var d1=everydays[1].two.d1;
+								var d2=everydays[1].two.d2;
+								var d3=everydays[1].two.d3;
+						        break;
+						    case 3:
+						        var d1=everydays[2].three.d1;
+								var d2=everydays[2].three.d2;
+								var d3=everydays[2].three.d3;
+						        break;
+						    case 4:
+						        var d1=everydays[3].four.d1;
+								var d2=everydays[3].four.d2;
+								var d3=everydays[3].four.d3;
+						        break;
+						    case 5:		        
+								var d1=everydays[4].five.d1;
+								var d2=everydays[4].five.d2;
+								var d3=everydays[4].five.d3;
+						        break;
+						    case 6:		       
+								var d1=everydays[5].six.d1;
+								var d2=everydays[5].six.d2;
+								var d3=everydays[5].six.d3;
+						        break;
+						    case 7:
+						        var d1=everydays[6].seven.d1;
+								var d2=everydays[6].seven.d2;
+								var d3=everydays[6].seven.d3;
+						        break;
+						    case 8:
+						        var d1=everydays[7].eight.d1;
+								var d2=everydays[7].eight.d2;
+								var d3=everydays[7].eight.d3;
+						        break;
+						    case 9:
+						        var d1=everydays[8].nine.d1;
+								var d2=everydays[8].nine.d2;
+								var d3=everydays[8].nine.d3;
+						        break;
+						    case 10:
+						        var d1=everydays[9].ten.d1;
+								var d2=everydays[9].ten.d2;
+								var d3=everydays[9].ten.d3;
+						        break;
+						    case 11:
+						        var d1=everydays[10].eleven.d1;
+								var d2=everydays[10].eleven.d2;
+								var d3=everydays[10].eleven.d3;
+						        break;
+						    case 12:
+						        var d1=everydays[11].twelve.d1;
+								var d2=everydays[11].twelve.d2;
+								var d3=everydays[11].twelve.d3;
+						        break;
+						    default:
+						        
+						}	
+
+						// 根据不同的月份对应不同的数据展现出来
+						if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12 ){
+							 diffMonth(style,31,month,d1,d2,d3);
+						}else if(month==4 || month==6 || month==9 || month==11){
+							 diffMonth(style,30,month,d1,d2,d3);
+						}else{
+							 if(secondMonth == 28){
+						         diffMonth(style,28,month,d1,d2,d3);
+						     }else if(secondMonth == 29){
+						         diffMonth(style,29,month,d1,d2,d3);
+						     }
+						}
+					}
+		       });
+		   })      
+		}
+
+        //控制logo动画
+		$("#div_logo").mouseover(function(){
+			$("#div_logo").removeClass("animated bounceIn infinite");
+		});
+
+		$("#div_logo").mouseout(function(){
+			$("#div_logo").addClass("animated bounceIn infinite");
+		});		
+   
+        var btn = $("#div_month button"); //获取button集合
+        //当前月份btn样式
+        btn.eq(month-1).addClass("active").siblings("button").removeClass("active");
+        // 根据月份得出当月的数据曲线图
+        function send(id){		
+	          $(document).ready(function(){
+                btn.eq(id-1).addClass("active").siblings("button").removeClass("active");
+				$.ajax({
+					url:"/apply/ajaxMonthData",
+					data:{'id':id},
+					dataType:'JSON',
+                    type:'post',
+					async:false,
+					success:function(result){                 
+		                 month=parseInt(result);
+		                 switch(month){
+						    case 1:
+						        var d1=everydays[0].one.d1;
+								var d2=everydays[0].one.d2;
+								var d3=everydays[0].one.d3;
+						        break;
+						    case 2:
+						        var d1=everydays[1].two.d1;
+								var d2=everydays[1].two.d2;
+								var d3=everydays[1].two.d3;
+						        break;
+						    case 3:
+						        var d1=everydays[2].three.d1;
+								var d2=everydays[2].three.d2;
+								var d3=everydays[2].three.d3;
+						        break;
+						    case 4:
+						        var d1=everydays[3].four.d1;
+								var d2=everydays[3].four.d2;
+								var d3=everydays[3].four.d3;
+						        break;
+						    case 5:		        
+								var d1=everydays[4].five.d1;
+								var d2=everydays[4].five.d2;
+								var d3=everydays[4].five.d3;
+						        break;
+						    case 6:		       
+								var d1=everydays[5].six.d1;
+								var d2=everydays[5].six.d2;
+								var d3=everydays[5].six.d3;
+						        break;
+						    case 7:
+						        var d1=everydays[6].seven.d1;
+								var d2=everydays[6].seven.d2;
+								var d3=everydays[6].seven.d3;
+						        break;
+						    case 8:
+						        var d1=everydays[7].eight.d1;
+								var d2=everydays[7].eight.d2;
+								var d3=everydays[7].eight.d3;
+						        break;
+						    case 9:
+						        var d1=everydays[8].nine.d1;
+								var d2=everydays[8].nine.d2;
+								var d3=everydays[8].nine.d3;
+						        break;
+						    case 10:
+						        var d1=everydays[9].ten.d1;
+								var d2=everydays[9].ten.d2;
+								var d3=everydays[9].ten.d3;
+						        break;
+						    case 11:
+						        var d1=everydays[10].eleven.d1;
+								var d2=everydays[10].eleven.d2;
+								var d3=everydays[10].eleven.d3;
+						        break;
+						    case 12:
+						        var d1=everydays[11].twelve.d1;
+								var d2=everydays[11].twelve.d2;
+								var d3=everydays[11].twelve.d3;
+						        break;
+						    default:
+						        
+						}
+		     
+
+						if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12 ){
+							 diffMonth(style,31,month,d1,d2,d3);
+						}else if(month==4 || month==6 || month==9 || month==11){
+						     diffMonth(style,30,month,d1,d2,d3);
+						}else{
+							 if(secondMonth == 28){
+						         diffMonth(style,28,month,d1,d2,d3);
+						     }else if(secondMonth == 29){
+						         diffMonth(style,29,month,d1,d2,d3);
+						     }
+						}
+			                
+	                }
+		        });
+			});	
+
+        }       
+
+
+        //打开网页预加载数据时显示，加载完后图标隐藏
+		document.onreadystatechange=function(){
+			  var loading='<div class="loading"><div class="pic"></div></div>';
+			  $('body').append(loading);
+			  if(document.readyState=='complete'){
+			  	  $('.loading').fadeOut();
+			  };
+		} 
+
+        
+        // 计算数组之和
+		function sumArr(data){
+			  var sum=0;
+			  for(var i=0;i<data.length;i++){
+                  sum+=data[i];
+			  }
+			  return sum;
+		} 
+
+        // 判断当年是不是闰年函数，闰年返回29年 不是返回28天
+		function getDaysOf2(year){
+            return (year % 400 == 0 || (year %100 != 0 && year % 4 == 0)) ? 29 : 28;
+        }
+            
+		
+</script>
+		
+		
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>搜索结果</title>
+    <link rel="stylesheet" type="text/css" href="__searchinfo__" />
+    <link rel="stylesheet" type="text/css" href="__frontcss__/page.css" />
+    <link rel="stylesheet" type="text/css" href="/public/front/css/commonstyle.css" />
+    <style type="text/css">
+ 
+    </style>
+</head>
+<body>
+{include file='common/top'}
+<div style="width: 100%;height: 15px;"></div>
+<div id="div_search">
+<form id="form1" name="form1" method="post" action="/searchpro.html" target="_blank" onsubmit="return search(this)">
+    <input id="inp1" type="text" onfocus="this.placeholder='';this.style.border='1px solid rgb(51,187,51)'" onblur="this.placeholder='搜你想搜的东西';this.style.border='1px solid rgb(230,230,230)'" name="keywords" id="keywords" placeholder="搜你想搜的东西" />
+    <input id="but1" type="submit" name="button" id="button" value="搜索" />
+</form>
+
+{literal}
+<script>
+function search(form){
+     if(form.keywords.value==""){
+		  alert("还未输入你想要搜索的产品");
+		  form.keywords.focus();
+		  return false;
+     }
+	 return true;
+}
+
+
+
+</script>
+{/literal}
+</div>
+
+{if condition='$resnums gt 0'}
+		<p id='p_total' style="font-weight: 600;">共查到{$total}条（每页30条），共{$pages}页／第{$page|default=1}页</p>  
+		<table border='0' width='90%' cellpadding='10' cellspacing='0' align='center'>     
+		<tr>
+		<th>图片</th><th>名称</th><th>发布人</th><th>发布时间</th><th>数量</th><th>价格</th><th width='15%'>描述</th><th width='15%'>条件</th><th>有无预订</th>
+		</tr>
+		{foreach name='list' item='proinfo'}
+		<tr>
+			<td><a href="/proshow/id/{$proinfo.pro_id}"><p class="p_img"><img src='__img__/pro/{$proinfo.pro_pic}' width='100'></a></p></td>
+			<td>{$proinfo.pro_name}</td>
+			<td>{$proinfo.username}</td>
+			<td>{$proinfo.pubtime}</td>
+			<td>{$proinfo.number}</td>
+			<td>{$proinfo.pro_price}</td>
+			<td valign='top' style="text-align:justify;">{$proinfo.pro_about}</td>
+			<td valign='top' style="text-align:justify;">{$proinfo.pro_con}</td>
+			{if condition='$proinfo.setorder eq 0'}
+					<td valign='top' style='color:#338EDB;'>还未预订</td>
+			{else /}
+					<td valign='top' style='color:red;'>已经预订</td>
+			{/if}
+		</tr>
+		{/foreach}
+		</table>
+
+{else /}
+<table border='0' width='90%' cellpadding='10' cellspacing='0' align='center' style="margin:0px auto;">
+<tr>
+	<td style="border-bottom:none;font:18px 'Microsoft Yahei';text-align: left;">没有找到你想要的产品，请继续查询！</td>
+</tr>
+</table>
+<div style="width: 100%;height:500px;"></div>
+
+{/if}
+
+
+<div style='width:90%;height:40px;margin:10px auto;'>
+{$list->render()}
+</div>
+{include file='common/bottom'}
+
+<literal>
+<script>
+
+//设置向baiduspider自动推送
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
+
+</script>
+</literal>
+</body>
+</html>
+

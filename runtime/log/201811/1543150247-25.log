@@ -1,0 +1,66 @@
+---------------------------------------------------------------
+[ 2018-11-25T20:50:47+08:00 ] 172.17.230.83 101.227.139.178 GET /showuser
+[ info ] www.51mfgs.com/showuser [运行时间：0.260731s][吞吐率：3.84req/s] [内存消耗：563.66kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, br',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.51mfgs.com',
+  'pragma' => 'no-cache',
+  'referer' => 'https://servicewechat.com/wx503527dc340335fb/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1  MicroMessenger/6.5.7 Language/zh_CN  token/741e7c78688c3d3896e4fb5c19f3fe20',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showuser[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011504s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wxuser` [ RunTime:0.003475s ]
+[ sql ] [ SQL ] SELECT * FROM `wxuser` ORDER BY id DESC LIMIT 10 [ RunTime:0.003066s ]
+---------------------------------------------------------------
+[ 2018-11-25T20:50:47+08:00 ] 172.17.230.83 101.227.139.178 GET /reportfm
+[ info ] www.51mfgs.com/reportfm [运行时间：0.272043s][吞吐率：3.68req/s] [内存消耗：554.20kb] [文件加载：39]
+[ info ] [ LANG ] /data/home/syu4378230001/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index/Index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'reportfm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, br',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.51mfgs.com',
+  'pragma' => 'no-cache',
+  'referer' => 'https://servicewechat.com/wx503527dc340335fb/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1  MicroMessenger/6.5.7 Language/zh_CN  token/741e7c78688c3d3896e4fb5c19f3fe20',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->reportfm[ /data/home/syu4378230001/htdocs/app/index/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010016s ] mysql:dbname=sdm442994699_db;host=sdm442994699.my3w.com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `reportage` [ RunTime:0.003143s ]
+[ sql ] [ SQL ] SELECT * FROM `reportage` WHERE  `state` = 1  AND `pos` = 1 ORDER BY id DESC LIMIT 1 [ RunTime:0.004504s ]

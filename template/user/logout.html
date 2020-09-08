@@ -1,0 +1,10 @@
+<?php
+session_start();
+setcookie("unc", "", time()-3600,"/"); 
+if(isset($_SESSION['unc']))
+{
+    unset($_SESSION['unc']);
+}
+
+echo "<script>location.assign('../index.php');</script>";
+?>

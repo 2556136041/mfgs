@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>取回密码</title>
+<style type="text/css">
+ {literal}
+    a{text-decoration: none;}
+    a:hover{color:red;}
+	div#div_main{
+		width:700px;
+		margin:50px auto;
+		/*border:1px solid black;*/
+	}
+	div#div_cut{
+		width:100%;
+		min-height: 200px;
+
+	}
+	table{width:700px;
+
+	      }
+	th{text-align: right;}
+	td{text-align: left;}
+	
+	input[type="button"]{
+         margin-right:15px;
+		 height:35px;
+		 padding:5px 10px;		 
+		 font-size:16px;
+
+	}
+
+	input[type="submit"]{
+         margin-right:15px;
+		 height:35px;
+		 width:80px;
+		 padding:5px 10px;		 
+		 font-size:16px;
+
+	}
+
+	input.inp1
+	{
+		height:35px;
+		font-size:16px;
+		/*border:1px solid black;*/
+		padding-left:3px;
+	}
+	h2{width: 600px;margin: 10px auto;margin-bottom:15px;text-align: center; }
+
+{/literal}
+</style>
+{literal}
+ <script src="/public/static/js/jquery/jquery3.0.js"></script>
+<script>
+	 $(function(){
+            var tel;
+            //向指定手机发送验证码
+            $("#sendbtn").click(function(){
+                 tel=$("#tel").val();
+                 var len=tel.length;
+                 var num=Math.floor(Math.random()*8999+1000);
+                 //alert(num);
+                  if(tel!==""){
+                          if(len=="11"){
+                                 $.get({
+						            //请求方式
+						            //type : "POST",
+						            //请求的媒体类型
+						            //contentType: "application/json;charset=UTF-8",
+						            //请求地址
+						            url : "https://v.juhe.cn/sms/send",
+						            //数据，json字符串
+						            data : {
+						                mobile:tel,
+                                        tpl_id:"105908",
+                                        tpl_value:encodeURI("#code#=")+num,
+                                        key:"e02ff088d77893adeb3e26f0e7070c2c"
+						            
+						            },
+						            dataType:"jsonp",
+						            //请求成功
+						            success : function(result) {
+						                    console.log(result);
+						                    $.get("/savetelyzm.html",
+												    {"telyzm":num,"tel":tel},
+												    function(data){
+											           if(data=="1"){
+												            console.log("成功");
+												            var second = 60;
+															var timer = null;
+															timer = setInterval(function(){
+																second -= 1;
+																if(second >0 ){
+																	$('#sendbtn').attr("value",second+"秒后重试");
+																}else{
+																	clearInterval(timer);
+																	$('#sendbtn').attr("value","获取验证码");
+																}
+															},1000);
+												        }else {
+												              console.log("失败");
+												        }  
+										  });
+
+						            }
+						        });
+			        
+                          }else{
+                               alert("位数不正确!");
+                               $("#tel").val("");
+                               $("#tel").focus();
+                          
+                          }
+                  
+                  }else{
+                      alert("不能为空!");
+                      $("#tel").focus();
+                  
+                  }
+                  
+              });
+                  
+      });
+			
+</script>
+{/literal}
+</head>
+
+<body>
+{include file='common/top'}
+<div id="div_main">
+<h2>取回密码</h2>
+
+<table border="0" cellpadding="0" cellspacing="15">
+    <form action="/checktelyzm" method="post">
+	<tr>
+		<th>手机号</th>
+		<td><input type="text" class="inp1" id="tel" name="tel" size="40" />
+            <input type="button" value="获取验证码" id="sendbtn">
+
+		</td>
+	</tr>
+	<tr>
+		<th>输入验证码</th>
+		<td><input type="text" class="inp1" id="verify" name="telyzm" size="40" /></td>
+	</tr>
+	
+	<tr>
+	    <td colspan="2" style="text-align:center;">
+	    <input size="40" type="submit" id="submit" value="提交" />
+	    </td>
+		
+	</tr>
+	</form>
+</table>
+
+</div>
+<div id="div_cut">
+
+</div>
+{include file='common/bottom'}
+</body>
+</html>

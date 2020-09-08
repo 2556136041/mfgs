@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>私品</title>
+<link rel="stylesheet" type="text/css"  href="__frontcss__/pro_center.css" />
+<link rel="stylesheet" type="text/css" href="__frontcss__/page.css" />
+<link rel="stylesheet" type="text/css" href="__frontcss__/commonstyle.css" />
+<style type="text/css">
+{literal}
+.loading{width: 100%;
+           height: 100%;
+           position:fixed;
+           top:0;
+           left: 0;
+           z-index: 100;
+           background: white;
+           }
+.pic{width:80px;
+         height:80px;
+         background-image:url(__img__/pro/load.gif);
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         margin:auto;
+}
+
+/*回到顶部*/
+#btn{
+	display: none;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	left:50%;
+	margin-left: 520px;
+	bottom:300px;
+	background:url(__img__/turntop.png) no-repeat left top;
+}
+#btn:hover{
+	background:url(__img__/turntop.png) no-repeat left -80px;
+}
+{/literal}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+{literal}
+<script>
+document.onreadystatechange=function(){
+	      var loading='<div class="loading"><div class="pic"></div></div>';
+	      $('body').append(loading);
+          if(document.readyState=='complete'){
+          	  $('.loading').fadeOut();
+          };
+}
+
+//回到顶部
+//document.onreadystatechange等同于window.onload
+	window.onload=function(){
+		var obtn=document.getElementById('btn');
+		var clientHeight=document.documentElement.clientHeight;
+		var timer=null;
+		var isTop=true;
+		window.onscroll=function(){
+			var ostop=document.documentElement.scrollTop || document.body.scrollTop;
+			if(ostop>=clientHeight){
+                obtn.style.display='block';
+			}else{
+				obtn.style.display='none';
+			}
+			if(!isTop){
+				clearInterval(timer);
+			}
+			isTop=false;
+		}
+		    obtn.onclick=function(){
+		    	// alert(clientHeight);
+		    	timer=setInterval(function(){
+                    var ostop=document.documentElement.scrollTop || document.body.scrollTop;
+                    var ispeed=Math.floor(-ostop / 10);
+		    	    document.documentElement.scrollTop = document.body.scrollTop =ostop+ispeed;
+		    	    isTop=true;
+		    	    if(ostop==0){
+		    	    	clearInterval(timer);
+		    	    }
+		    	},30);
+		    	
+		    }
+	}
+</script>
+{/literal}
+</head>
+
+<body>
+{include file='common/top'}
+
+<div id="div_lead" style="background: rgb(204,255,204);">
+&nbsp;<img height="25px" align="top" src="__img__/currentpos.png">&nbsp;当前位置：<a href="/index/Index/index">首页</a> >> 私品
+</div>
+<div id="div_show">
+{if condition='!empty($list)'}
+{foreach name='list' item='all'}
+
+		{if condition='$all.remainnum>0'}
+		<div class='div_img'><a href='/proshow/id/{$all.pro_id}'><p class="p_img"><img width='100%' height='250px' src='__img__/pro/{$all.pro_pic}' alt='' /></p></a>
+
+		<span id="span_about"><font style="display:inline-block;width:60%;float:left;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;">{$all.pro_name}</font>
+		<font color='#338EDB' style="display:inline-block;float:right;">
+		还剩{$all.number-($all.number-$all.remainnum)}个/件</font>
+		</span></div>
+        {else}
+		<div class='div_img'><a href='javascript:void(0)'><p class="p_img"><img class='pro_order' width='100%' height='250px' src='__img__/pro/{$all.pro_pic}' alt='' /></p></a>
+
+		<span id="span_about"><font style="display:inline-block;width:60%;float:left;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;">{$all.pro_name}</font>
+		<font color='red' style="display:inline-block;float:right;">已预订</font>
+		</span></div>
+		{/if}
+
+{/foreach}
+{else}
+还没有产品
+{/if}
+   
+{if condition='$total%3==1'}
+    {for start='0' end='2'}
+        <div class='div_img'><a href="/myspace.html"><p class="p_img"><img src='__img__/add.jpg' width='100%' height="250px"></p></a><span id='span_about'>点击图标分享物品</span></div>
+    {/for}
+{elseif condition='$total%3==2'}
+        <div class='div_img'><a href="/myspace.html"><p class="p_img"><img src='__img__/add.jpg' width='100%' height="250px"></p></a><span id='span_about'>点击图标分享物品</span></div>
+{else/}
+        <div class='p_img' style='display:none;'></div>
+{/if}
+
+
+</div>
+<div style="clear:both;height:2px;width:1000px;margin:auto;"></div>
+{$list->render()}
+
+{include file='common/bottom'}
+<a href="javascript:void(0);" id="btn" title="回到顶部"></a>
+
+<literal>
+<script>
+
+//设置向baiduspider自动推送
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
+
+</script>
+</literal>
+</body>
+</html>
